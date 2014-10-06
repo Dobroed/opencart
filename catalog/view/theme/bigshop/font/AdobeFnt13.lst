@@ -1,0 +1,1347 @@
+%!Adobe-FontList 1.13
+%Locale:0x419
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\arnopro-regular-webfont.eot
+FileModTime:1356060312
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\arnopro-regular-webfont.svg
+FileModTime:1356060346
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:ArnoPro-Regular
+FamilyName:Arno Pro
+StyleName:Regular
+FullName:Arno Pro Regular
+MenuName:Arno Pro
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\arnopro-regular-webfont.ttf
+DataFormat:sfntData
+FileLength:76904
+FileModTime:1356060336
+WeightClass:400
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\arnopro-regular-webfont.woff
+FileModTime:1356060324
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:CenturySchoolbook-Bold
+FamilyName:Century Schoolbook
+StyleName:Bold
+FullName:Century Schoolbook Bold
+MenuName:Century Schoolbook
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\CenturySchoolbook-Bold.eot
+DataFormat:Plain
+UsesStandardEncoding:no
+isCFF:no
+FileLength:98346
+FileModTime:1366081446
+WeightClass:700
+WidthClass:5
+AngleClass:0
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\CenturySchoolbook-Bold.svg
+FileModTime:1366081430
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:CenturySchoolbook-Bold
+FamilyName:Century Schoolbook
+StyleName:Bold
+FullName:Century Schoolbook Bold
+MenuName:Century Schoolbook
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\CenturySchoolbook-Bold.ttf
+DataFormat:sfntData
+FileLength:142108
+FileModTime:1366081428
+WeightClass:700
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\CenturySchoolbook-Bold.woff
+FileModTime:1366081440
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:CenturySchoolbook-BoldItalic
+FamilyName:Century Schoolbook
+StyleName:Bold Italic
+FullName:Century Schoolbook Bold Italic
+MenuName:Century Schoolbook
+StyleBits:3
+WritingScript:Roman
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\CenturySchoolbook-BoldItalic.eot
+DataFormat:Plain
+UsesStandardEncoding:no
+isCFF:no
+FileLength:98175
+FileModTime:1366081338
+WeightClass:700
+WidthClass:5
+AngleClass:1
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\CenturySchoolbook-BoldItalic.svg
+FileModTime:1366081406
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:CenturySchoolbook-BoldItalic
+FamilyName:Century Schoolbook
+StyleName:Bold Italic
+FullName:Century Schoolbook Bold Italic
+MenuName:Century Schoolbook
+StyleBits:3
+WritingScript:Roman
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\CenturySchoolbook-BoldItalic.ttf
+DataFormat:sfntData
+FileLength:134504
+FileModTime:1366081392
+WeightClass:700
+WidthClass:5
+AngleClass:1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\CenturySchoolbook-BoldItalic.woff
+FileModTime:1366081376
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\fontawesome-webfont.eot
+FileModTime:1358375150
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\fontawesome-webfont.svg
+FileModTime:1358375150
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:FontAwesome
+FamilyName:FontAwesome
+StyleName:Regular
+FullName:FontAwesome Regular
+MenuName:FontAwesome
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\fontawesome-webfont.ttf
+DataFormat:sfntData
+FileLength:55096
+FileModTime:1358375150
+WeightClass:400
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\fontawesome-webfont.woff
+FileModTime:1358375150
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:FontAwesome
+FamilyName:FontAwesome
+StyleName:Regular
+FullName:FontAwesome
+MenuName:FontAwesome
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\FontAwesome.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:48748
+FileModTime:1358375150
+WeightClass:400
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PT-Sans-fontfacekit.zip
+FileModTime:1366092154
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PTC55F-webfont.eot
+FileModTime:1293054614
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PTC55F-webfont.svg
+FileModTime:1293054614
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:PTSans-Caption
+FamilyName:PT Sans Caption
+StyleName:Regular
+FullName:PT Sans Caption Regular
+MenuName:PT Sans Caption
+StyleBits:0
+FamilyNameNative:
+StyleNameNative:Regular
+FullNameNative:
+WritingScript:Cyrillic
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PTC55F-webfont.ttf
+DataFormat:sfntData
+FileLength:40284
+FileModTime:1293054614
+WeightClass:400
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PTC55F-webfont.woff
+FileModTime:1293054614
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PTC75F-webfont.eot
+FileModTime:1293054642
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PTC75F-webfont.svg
+FileModTime:1293054642
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:PTSans-CaptionBold
+FamilyName:PT Sans Caption
+StyleName:Bold
+FullName:PT Sans Caption Bold
+MenuName:PT Sans Caption
+StyleBits:2
+FamilyNameNative:
+StyleNameNative:Bold
+FullNameNative:
+WritingScript:Cyrillic
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PTC75F-webfont.ttf
+DataFormat:sfntData
+FileLength:38544
+FileModTime:1293054642
+WeightClass:700
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PTC75F-webfont.woff
+FileModTime:1293054644
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PTN57F-webfont.eot
+FileModTime:1293054668
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PTN57F-webfont.svg
+FileModTime:1293054668
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:PTSans-Narrow
+FamilyName:PT Sans Narrow
+StyleName:Regular
+FullName:PT Sans Narrow Regular
+MenuName:PT Sans Narrow
+StyleBits:0
+FamilyNameNative:
+StyleNameNative:Regular
+FullNameNative:
+WritingScript:Cyrillic
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PTN57F-webfont.ttf
+DataFormat:sfntData
+FileLength:37268
+FileModTime:1293054668
+WeightClass:400
+WidthClass:3
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PTN57F-webfont.woff
+FileModTime:1293054668
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PTN77F-webfont.eot
+FileModTime:1293054696
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PTN77F-webfont.svg
+FileModTime:1293054696
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:PTSans-NarrowBold
+FamilyName:PT Sans Narrow
+StyleName:Bold
+FullName:PT Sans Narrow Bold
+MenuName:PT Sans Narrow
+StyleBits:2
+FamilyNameNative:
+StyleNameNative:Bold
+FullNameNative:
+WritingScript:Cyrillic
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PTN77F-webfont.ttf
+DataFormat:sfntData
+FileLength:36240
+FileModTime:1293054696
+WeightClass:700
+WidthClass:3
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PTN77F-webfont.woff
+FileModTime:1293054696
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\pts55f-webfont.eot
+FileModTime:1356060178
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\pts55f-webfont.svg
+FileModTime:1356060240
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:PTSans-Regular
+FamilyName:PT Sans
+StyleName:Regular
+FullName:PT Sans Regular
+MenuName:PT Sans
+StyleBits:0
+FamilyNameNative:
+StyleNameNative:Regular
+FullNameNative:
+WritingScript:Cyrillic
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\pts55f-webfont.ttf
+DataFormat:sfntData
+FileLength:70580
+FileModTime:1356060226
+WeightClass:400
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\pts55f-webfont.woff
+FileModTime:1356060206
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\pts56f-webfont.eot
+FileModTime:1356060256
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\pts56f-webfont.svg
+FileModTime:1356060300
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:PTSans-Italic
+FamilyName:PT Sans
+StyleName:Italic
+FullName:PT Sans Italic
+MenuName:PT Sans
+StyleBits:1
+FamilyNameNative:
+StyleNameNative:Italic
+FullNameNative:
+WritingScript:Cyrillic
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\pts56f-webfont.ttf
+DataFormat:sfntData
+FileLength:83460
+FileModTime:1356060290
+WeightClass:400
+WidthClass:5
+AngleClass:1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\pts56f-webfont.woff
+FileModTime:1356060278
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PTS75F-webfont.eot
+FileModTime:1293054508
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PTS75F-webfont.svg
+FileModTime:1293054508
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:PTSans-Bold
+FamilyName:PT Sans
+StyleName:Bold
+FullName:PT Sans Bold
+MenuName:PT Sans
+StyleBits:2
+FamilyNameNative:
+StyleNameNative:Bold
+FullNameNative:
+WritingScript:Cyrillic
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PTS75F-webfont.ttf
+DataFormat:sfntData
+FileLength:36736
+FileModTime:1293054508
+WeightClass:700
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PTS75F-webfont.woff
+FileModTime:1293054508
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PTS76F-webfont.eot
+FileModTime:1293054530
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PTS76F-webfont.svg
+FileModTime:1293054530
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:PTSans-BoldItalic
+FamilyName:PT Sans
+StyleName:Bold Italic
+FullName:PT Sans Bold Italic
+MenuName:PT Sans
+StyleBits:3
+FamilyNameNative:
+StyleNameNative:Bold Italic
+FullNameNative:
+WritingScript:Cyrillic
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PTS76F-webfont.ttf
+DataFormat:sfntData
+FileLength:44388
+FileModTime:1293054530
+WeightClass:700
+WidthClass:5
+AngleClass:1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PTS76F-webfont.woff
+FileModTime:1293054530
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PTSans (1).zip
+FileModTime:1366091586
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\ptsans.zip
+FileModTime:1366089322
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PTSans (1)\OT_TT_Install_E.txt
+FileModTime:1270104404
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PTSans (1)\OT_TT_Install_R.txt
+FileModTime:1270104406
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PTSans (1)\PT Free Font License_eng_1.2.txt
+FileModTime:1293080196
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PTSans (1)\PT Free Font License_rus_1.2.txt
+FileModTime:1293080196
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:PTSans-Caption
+FamilyName:PT Sans Caption
+StyleName:Regular
+FullName:PT Sans Caption
+MenuName:PT Sans Caption
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PTSans (1)\PTC55F.ttf
+DataFormat:sfntData
+FileLength:375036
+FileModTime:1293140822
+WeightClass:400
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:PTSans-CaptionBold
+FamilyName:PT Sans Caption
+StyleName:Bold
+FullName:PT Sans Caption Bold
+MenuName:PT Sans Caption
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PTSans (1)\PTC75F.ttf
+DataFormat:sfntData
+FileLength:386624
+FileModTime:1293002628
+WeightClass:700
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:PTSans-Narrow
+FamilyName:PT Sans Narrow
+StyleName:Regular
+FullName:PT Sans Narrow
+MenuName:PT Sans Narrow
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PTSans (1)\PTN57F.ttf
+DataFormat:sfntData
+FileLength:384056
+FileModTime:1293002632
+WeightClass:400
+WidthClass:3
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:PTSans-NarrowBold
+FamilyName:PT Sans Narrow
+StyleName:Bold
+FullName:PT Sans Narrow Bold
+MenuName:PT Sans Narrow
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PTSans (1)\PTN77F.ttf
+DataFormat:sfntData
+FileLength:475564
+FileModTime:1293002638
+WeightClass:700
+WidthClass:3
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:PTSans-Regular
+FamilyName:PT Sans
+StyleName:Regular
+FullName:PT Sans
+MenuName:PT Sans
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PTSans (1)\PTS55F.ttf
+DataFormat:sfntData
+FileLength:430804
+FileModTime:1293002642
+WeightClass:400
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:PTSans-Italic
+FamilyName:PT Sans
+StyleName:Italic
+FullName:PT Sans Italic
+MenuName:PT Sans
+StyleBits:1
+WritingScript:Roman
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PTSans (1)\PTS56F.ttf
+DataFormat:sfntData
+FileLength:424296
+FileModTime:1293002648
+WeightClass:400
+WidthClass:5
+AngleClass:1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:PTSans-Bold
+FamilyName:PT Sans
+StyleName:Bold
+FullName:PT Sans Bold
+MenuName:PT Sans
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PTSans (1)\PTS75F.ttf
+DataFormat:sfntData
+FileLength:458084
+FileModTime:1293002652
+WeightClass:700
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:PTSans-BoldItalic
+FamilyName:PT Sans
+StyleName:Bold Italic
+FullName:PT Sans Bold Italic
+MenuName:PT Sans
+StyleBits:3
+WritingScript:Roman
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PTSans (1)\PTS76F.ttf
+DataFormat:sfntData
+FileLength:363048
+FileModTime:1293002656
+WeightClass:700
+WidthClass:5
+AngleClass:1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\ptsans\ptc75f.eot
+FileModTime:1339272912
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:PTSans-CaptionBold
+FamilyName:PT Sans Caption
+StyleName:Bold
+FullName:PT Sans Caption Bold
+MenuName:PT Sans Caption
+StyleBits:2
+FamilyNameNative:
+StyleNameNative:Bold
+FullNameNative:
+WritingScript:Cyrillic
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\ptsans\ptc75f.ttf
+DataFormat:sfntData
+FileLength:90120
+FileModTime:1339272912
+WeightClass:700
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\ptsans\ptc75f.woff
+FileModTime:1339272912
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\ptsans\ptn57f.eot
+FileModTime:1339272912
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:PTSans-Narrow
+FamilyName:PT Sans Narrow
+StyleName:Regular
+FullName:PT Sans Narrow Regular
+MenuName:PT Sans Narrow
+StyleBits:0
+FamilyNameNative:
+StyleNameNative:Regular
+FullNameNative:
+WritingScript:Cyrillic
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\ptsans\ptn57f.ttf
+DataFormat:sfntData
+FileLength:91136
+FileModTime:1339272912
+WeightClass:400
+WidthClass:3
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\ptsans\ptn57f.woff
+FileModTime:1339272912
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\ptsans\ptn77f.eot
+FileModTime:1339272912
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:PTSans-NarrowBold
+FamilyName:PT Sans Narrow
+StyleName:Bold
+FullName:PT Sans Narrow Bold
+MenuName:PT Sans Narrow
+StyleBits:2
+FamilyNameNative:
+StyleNameNative:Bold
+FullNameNative:
+WritingScript:Cyrillic
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\ptsans\ptn77f.ttf
+DataFormat:sfntData
+FileLength:85272
+FileModTime:1339272912
+WeightClass:700
+WidthClass:3
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\ptsans\ptn77f.woff
+FileModTime:1339272912
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\ptsans\pts55f.eot
+FileModTime:1339254548
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:PTSans-Regular
+FamilyName:PT Sans
+StyleName:Regular
+FullName:PT Sans Regular
+MenuName:PT Sans
+StyleBits:0
+FamilyNameNative:
+StyleNameNative:Regular
+FullNameNative:
+WritingScript:Cyrillic
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\ptsans\pts55f.ttf
+DataFormat:sfntData
+FileLength:88780
+FileModTime:1339254548
+WeightClass:400
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\ptsans\pts55f.woff
+FileModTime:1339254548
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\ptsans\pts56f.eot
+FileModTime:1339272912
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:PTSans-Italic
+FamilyName:PT Sans
+StyleName:Italic
+FullName:PT Sans Italic
+MenuName:PT Sans
+StyleBits:1
+FamilyNameNative:
+StyleNameNative:Italic
+FullNameNative:
+WritingScript:Cyrillic
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\ptsans\pts56f.ttf
+DataFormat:sfntData
+FileLength:106624
+FileModTime:1339272912
+WeightClass:400
+WidthClass:5
+AngleClass:1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\ptsans\pts56f.woff
+FileModTime:1339272912
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\ptsans\pts76f.eot
+FileModTime:1339272912
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:PTSans-BoldItalic
+FamilyName:PT Sans
+StyleName:Bold Italic
+FullName:PT Sans Bold Italic
+MenuName:PT Sans
+StyleBits:3
+FamilyNameNative:
+StyleNameNative:Bold Italic
+FullNameNative:
+WritingScript:Cyrillic
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\ptsans\pts76f.ttf
+DataFormat:sfntData
+FileLength:104572
+FileModTime:1339272912
+WeightClass:700
+WidthClass:5
+AngleClass:1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\ptsans\pts76f.woff
+FileModTime:1339272912
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\ptsans\ptsans.css
+FileModTime:1341536654
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PT-Sans-fontfacekit\demo.html
+FileModTime:1366038118
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PT-Sans-fontfacekit\Paratype PT Sans Free Font License.txt
+FileModTime:1366038118
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PT-Sans-fontfacekit\PTC55F-webfont.eot
+FileModTime:1293054614
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PT-Sans-fontfacekit\PTC55F-webfont.svg
+FileModTime:1293054614
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:PTSans-Caption
+FamilyName:PT Sans Caption
+StyleName:Regular
+FullName:PT Sans Caption Regular
+MenuName:PT Sans Caption
+StyleBits:0
+FamilyNameNative:
+StyleNameNative:Regular
+FullNameNative:
+WritingScript:Cyrillic
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PT-Sans-fontfacekit\PTC55F-webfont.ttf
+DataFormat:sfntData
+FileLength:40284
+FileModTime:1293054614
+WeightClass:400
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PT-Sans-fontfacekit\PTC55F-webfont.woff
+FileModTime:1293054614
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PT-Sans-fontfacekit\PTC75F-webfont.eot
+FileModTime:1293054642
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PT-Sans-fontfacekit\PTC75F-webfont.svg
+FileModTime:1293054642
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:PTSans-CaptionBold
+FamilyName:PT Sans Caption
+StyleName:Bold
+FullName:PT Sans Caption Bold
+MenuName:PT Sans Caption
+StyleBits:2
+FamilyNameNative:
+StyleNameNative:Bold
+FullNameNative:
+WritingScript:Cyrillic
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PT-Sans-fontfacekit\PTC75F-webfont.ttf
+DataFormat:sfntData
+FileLength:38544
+FileModTime:1293054642
+WeightClass:700
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PT-Sans-fontfacekit\PTC75F-webfont.woff
+FileModTime:1293054644
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PT-Sans-fontfacekit\PTN57F-webfont.eot
+FileModTime:1293054668
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PT-Sans-fontfacekit\PTN57F-webfont.svg
+FileModTime:1293054668
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:PTSans-Narrow
+FamilyName:PT Sans Narrow
+StyleName:Regular
+FullName:PT Sans Narrow Regular
+MenuName:PT Sans Narrow
+StyleBits:0
+FamilyNameNative:
+StyleNameNative:Regular
+FullNameNative:
+WritingScript:Cyrillic
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PT-Sans-fontfacekit\PTN57F-webfont.ttf
+DataFormat:sfntData
+FileLength:37268
+FileModTime:1293054668
+WeightClass:400
+WidthClass:3
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PT-Sans-fontfacekit\PTN57F-webfont.woff
+FileModTime:1293054668
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PT-Sans-fontfacekit\PTN77F-webfont.eot
+FileModTime:1293054696
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PT-Sans-fontfacekit\PTN77F-webfont.svg
+FileModTime:1293054696
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:PTSans-NarrowBold
+FamilyName:PT Sans Narrow
+StyleName:Bold
+FullName:PT Sans Narrow Bold
+MenuName:PT Sans Narrow
+StyleBits:2
+FamilyNameNative:
+StyleNameNative:Bold
+FullNameNative:
+WritingScript:Cyrillic
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PT-Sans-fontfacekit\PTN77F-webfont.ttf
+DataFormat:sfntData
+FileLength:36240
+FileModTime:1293054696
+WeightClass:700
+WidthClass:3
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PT-Sans-fontfacekit\PTN77F-webfont.woff
+FileModTime:1293054696
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PT-Sans-fontfacekit\PTS55F-webfont.eot
+FileModTime:1293054586
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PT-Sans-fontfacekit\PTS55F-webfont.svg
+FileModTime:1293054586
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:PTSans-Regular
+FamilyName:PT Sans
+StyleName:Regular
+FullName:PT Sans Regular
+MenuName:PT Sans
+StyleBits:0
+FamilyNameNative:
+StyleNameNative:Regular
+FullNameNative:
+WritingScript:Cyrillic
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PT-Sans-fontfacekit\PTS55F-webfont.ttf
+DataFormat:sfntData
+FileLength:38884
+FileModTime:1293054586
+WeightClass:400
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PT-Sans-fontfacekit\PTS55F-webfont.woff
+FileModTime:1293054586
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PT-Sans-fontfacekit\PTS56F-webfont.eot
+FileModTime:1293054560
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PT-Sans-fontfacekit\PTS56F-webfont.svg
+FileModTime:1293054560
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:PTSans-Italic
+FamilyName:PT Sans
+StyleName:Italic
+FullName:PT Sans Italic
+MenuName:PT Sans
+StyleBits:1
+FamilyNameNative:
+StyleNameNative:Italic
+FullNameNative:
+WritingScript:Cyrillic
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PT-Sans-fontfacekit\PTS56F-webfont.ttf
+DataFormat:sfntData
+FileLength:46192
+FileModTime:1293054560
+WeightClass:400
+WidthClass:5
+AngleClass:1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PT-Sans-fontfacekit\PTS56F-webfont.woff
+FileModTime:1293054560
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PT-Sans-fontfacekit\PTS75F-webfont.eot
+FileModTime:1293054508
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PT-Sans-fontfacekit\PTS75F-webfont.svg
+FileModTime:1293054508
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:PTSans-Bold
+FamilyName:PT Sans
+StyleName:Bold
+FullName:PT Sans Bold
+MenuName:PT Sans
+StyleBits:2
+FamilyNameNative:
+StyleNameNative:Bold
+FullNameNative:
+WritingScript:Cyrillic
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PT-Sans-fontfacekit\PTS75F-webfont.ttf
+DataFormat:sfntData
+FileLength:36736
+FileModTime:1293054508
+WeightClass:700
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PT-Sans-fontfacekit\PTS75F-webfont.woff
+FileModTime:1293054508
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PT-Sans-fontfacekit\PTS76F-webfont.eot
+FileModTime:1293054530
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PT-Sans-fontfacekit\PTS76F-webfont.svg
+FileModTime:1293054530
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:PTSans-BoldItalic
+FamilyName:PT Sans
+StyleName:Bold Italic
+FullName:PT Sans Bold Italic
+MenuName:PT Sans
+StyleBits:3
+FamilyNameNative:
+StyleNameNative:Bold Italic
+FullNameNative:
+WritingScript:Cyrillic
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PT-Sans-fontfacekit\PTS76F-webfont.ttf
+DataFormat:sfntData
+FileLength:44388
+FileModTime:1293054530
+WeightClass:700
+WidthClass:5
+AngleClass:1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PT-Sans-fontfacekit\PTS76F-webfont.woff
+FileModTime:1293054530
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:G:\Обучение\Верстка сайта\bootstrap\Font\PT-Sans-fontfacekit\stylesheet.css
+FileModTime:1366038118
+%EndFont
+

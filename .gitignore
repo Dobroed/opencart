@@ -1,0 +1,20 @@
+# cache directories
+Thumbs.db
+.DS_Store
+*.empty
+
+#netbeans project files
+nbproject
+
+#eclipse, zend studio, aptana or other eclipse like project files
+.buildpath
+.project
+.settings
+
+# sass cache files
+*.sass-cache
+
+
+# image and cache directories
+image/
+/catalog/model/checkout/api.php
