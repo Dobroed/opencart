@@ -19,7 +19,7 @@ label { cursor: pointer; }
 #container { text-align:left;   overflow:auto; }
 #column-left { float:left; width:220px; padding:0px 15px 0 0px; border-right:1px solid #eee; }
 #column-right { float: right; width:220px; padding:0px 0px 0 15px; border-left:1px solid #eee; }
-#content { min-height: 400px; margin-bottom:10px; padding:0px 0px 0 0px;margin-left:250px;  }
+#content { min-height: 900px; margin-bottom:10px; padding:0px 0px 0 0px;margin-left:250px;  }
 #column-left + #column-right + #content, #column-left + #content { }
 #column-right + #content { margin-right:250px; }
 /* header */
