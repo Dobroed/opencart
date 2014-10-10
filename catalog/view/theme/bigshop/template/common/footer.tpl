@@ -115,13 +115,13 @@
             display: "block",
             //marginTop: "-5em",
             borderLeft: "1px solid #eee",
-            left: width - 1  // main should overlay submenu
+            left: width - 2  // main should overlay submenu
                     //height: height  // padding for main dropdown's arrow
         });
 
         // Keep the currently activated row's highlighted look
         $row.find("a").addClass("maintainHover");
-      
+
         //$("#content").animate({opacity:"0.1"}, 100);//вверх
     }
 
@@ -136,15 +136,17 @@
         $submenu.css("display", "none");
         $row.find("a").removeClass("maintainHover");
         $("a.maintainHover").removeClass("maintainHover");
-      
+
     }
 
- $("#mega-1").hover(function () {
-      
-     $("#content").animate({opacity:"0.1"}, 600);//вверх
+   $("#mega-1").hover(function () {
+
+        $("#content").delay(1000).animate({opacity:"0.1"}, 600);//вверх
+
     },
             function () {
-             $("#content").animate({opacity:"1"}, 200);//вверх
+            //    $(".links").text("mega-1 unhover");
+                $("#content").clearQueue().stop().animate({opacity:"1"}, 100);//вверх
                 $("div[class^='sub-container mega']").css("display", "none");
                 $("a.maintainHover").removeClass("maintainHover");
                 $menu.menuAim({
@@ -153,14 +155,16 @@
 
                 });
             });
-                
- 
+
+
     $("div[class^='sub-container']").hover(function () {
+        //  $(".links").text("div[class^='sub-container hover");
         //$(this).css("display", "none"); );
-       $("#content").animate({opacity:"0.1"}, 600);//вверх
+        $("#content").stop().animate({opacity:"0.1"}, 600);//вверх
     },
             function () {
-              $("#content").animate({opacity:"1"}, 200);//вверх
+              //  $(".links").text("div[class^='sub-container UNhover");
+               // $("#content").animate({opacity:"1"}, 200);//вверх
                 $("div[class^='sub-container mega']").css("display", "none");
                 $("a.maintainHover").removeClass("maintainHover");
                 $menu.menuAim({
@@ -170,23 +174,15 @@
                 });
             });
 
-    $(document).click(function () {
-
-        // Simply hide the submenu on any click. Again, this is just a hacked
-        // together menu/submenu structure to show the use of jQuery-menu-aim.
-        // $(".popover").css("display", "none");
-
-
-        $("div[class^='sub-container mega']").css("display", "none");
-        $("a.maintainHover").removeClass("maintainHover");
-        $menu.menuAim({
-            activate: activateSubmenu,
-            deactivate: deactivateSubmenu
-
-        });
-    });
-
-
+    $("#content").hover(function () {
+       
+        $(this).clearQueue().stop().animate({opacity:"1"}, 100);
+  
+    },
+            function () {
+                 });
+         
+   
 </script>
 
 </body></html>

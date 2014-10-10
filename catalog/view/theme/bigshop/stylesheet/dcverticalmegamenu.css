@@ -85,7 +85,7 @@ background: url(../image/arrow_left.png) no-repeat -6px 0;
 position: absolute;
 background: #FFF;
 top:0px;
-padding: 10px 10px 0 10px;
+padding: 10px 10px 0 0;
 overflow: hidden;
 border: 1px solid #EEE;
 border-left: none;
@@ -101,6 +101,7 @@ background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(246,246,246,
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
 
 }
+.sub {margin-left:10px;}
 .mega-menu li .sub .row {
 width: 100%; overflow: hidden; /* Clear floats */
 }
@@ -170,3 +171,4 @@ background: url(../image/arrow_white.png) no-repeat 7px 10px;
 color: #a32403; 
 background: #efefef url(../image/arrow_on.png) no-repeat 7px 10px;
 }
+

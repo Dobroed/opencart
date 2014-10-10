@@ -418,7 +418,7 @@ a.wishlist:hover { color:#F15A23; }
 #footer:after{clear:both; content: ' ' ; height:0;}
 #footer .column { float: left; position:relative; }
 #footer .column + .column { margin-left:15px; }
-#footer .column ul {= bottom:40px; width:150px; padding:5px 5px; }
+#footer .column ul {bottom:40px; width:150px; padding:5px 5px; }
 #footer .column:hover ul { display:block; }
 #footer .column ul li { list-style-type:none; }
 #footer .column a { text-decoration: none; color: #999; display:block; padding:0px 5px; height:20px; line-height:20px; -webkit-border-radius:2px; -moz-border-radius:2px; -khtml-border-radius:2px; border-radius:2px; font-size:12px; }
@@ -532,7 +532,7 @@ select { width:99%; }
 #menu { padding:0; height:auto; text-align:center;}
 #menu > ul { display:none; text-align:left; background:#fff!important; box-shadow:0 2px 8px rgba(0, 0, 0, 0.2); position:relative; z-index:9;}
 #menu > ul > li { float:none; padding:0px;width:100%;}
-#menu > ul > li > a { color:#fff!important; line-height:30px; border-bottom:1px solid #eee; margin-top:2px; background:#444444;!important;}
+#menu > ul > li > a { color:#fff!important; line-height:30px; border-bottom:1px solid #eee; margin-top:2px; background:#444444!important;}
 #menu > span { text-transform:uppercase; font-size:16px; padding:0px 15px 0px 8px; height:45px; line-height:45px; text-align:center; margin:0; cursor: pointer; display:inline-block; color:#444; background:url(../image/arrow-down.png) no-repeat right center;}
 #menu > ul > li > div { display:none; position:inherit; z-index:auto; border:1px solid #ddd; border-width:1px 0px 0px 0px;text-align: center; box-shadow:none!important; margin:0!important;background:#90D51F!important; }
 #menu > ul > li > div > ul > li {width:100%;}
@@ -646,4 +646,27 @@ font-weight:normal;
 	
 
 }
+
+
+
+.hidden {
+display: none!important;
+}
+.showall {
+    margin: 5px 5px 5px 15px;
+}
+
+.showall span {
+ color: #353535;
+text-decoration: underline;
+font-size: 0.8em;
+}
+
+.showall span:hover{
+    cursor:pointer;
+  color: #90D51F;
+
+-moz-transition: all 0.4s ease 0s;
+transition: all 0.4s ease 0s;
+-webkit-transition: all 0.4s ease 0s;
 }
