@@ -85,7 +85,7 @@ CugwbgDoQKRH()
   </div>
   <h1><?php echo $heading_title; ?>
   </h1>
-  <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
+  <!--<form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">-->
     <div class="cart-info">
 			<table>
 	        <thead>
@@ -183,9 +183,9 @@ CugwbgDoQKRH()
       </table>
 
     </div>
-</form>
-	
-  <?php if(($page=="cart")||(!$page)) { ?>
+<!--</form>-->
+	 
+  <?php if(($page=="cart")||(!$page)) { ?>  
   <?php if(empty($api_errors)) { ?>
   <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
   <input type="hidden" name="page" value="checkout">
@@ -195,6 +195,7 @@ CugwbgDoQKRH()
   <option value="<?php echo $id.'.'.$name; ?>" selected="selected"><?php echo $name; ?></option>
   <?php } ?>
   </select>
+    
 	<input type="submit" value="<?php echo $button_checkout; ?>" class="button" />
 
   </div>
@@ -204,7 +205,8 @@ CugwbgDoQKRH()
   <h3><?php echo $api_error; ?><h3>
   <?php } } } elseif($page=="checkout") { ?>
   <div id="shipping" class="content" style="display: block;">
- <script type="text/javascript"> function show_ur(b){
+ <script type="text/javascript"> 
+         function show_ur(b){
 	var a=document.getElementById(b);
 	if("none"==a.style.display){a.style.display="block"}
 	else{a.style.display="none"}

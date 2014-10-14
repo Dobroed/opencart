@@ -191,9 +191,12 @@ class ControllerCheckoutCart extends Controller {
 			$api_errors[]="Извините, корзина временно недоступна!";
 			}
 			else
-			{	if(!isset($this->request->post['page']))
+			{
+                           
+                            if(!isset($this->request->post['page']))
 				{
 					$this->data['page'] = "cart";
+                                        
 					$prod_ids='';
 					foreach($products as $product)
 					{
@@ -224,12 +227,14 @@ class ControllerCheckoutCart extends Controller {
 						foreach($products as $product)
 						{
 							$id=$api->getProductIdForArticul($product['sku']);
+                                                      
 							$count=$product['quantity'];
 							$cartdevs=$api->getCartDelivery($id."-".$count, 0, $region[0]);
 							foreach($cartdevs as $devs)
 							{
 								foreach($devs->getDeliveries() as $dev)
 								{
+                                                                    
 									$dev_types[$product['sku']][]=$dev->getId();
 									foreach($dev->getPayments() as $pay)
 									{
@@ -239,7 +244,7 @@ class ControllerCheckoutCart extends Controller {
 								}
 							}
 							
-						}
+						} 
 						
 						$sdList = $api->getSelfDeliveriesForRegion($region[0]);
 						if($sdList)
@@ -252,6 +257,7 @@ class ControllerCheckoutCart extends Controller {
 						$this->data['dev_names']=$dev_names;
 						$this->data['pay_names']=$pay_names;
 						
+                                         
 						$this->data['region']=$region[1];
 						if(isset($this->request->post['check']))
 						{
@@ -361,6 +367,7 @@ class ControllerCheckoutCart extends Controller {
 									$id=$api->getProductIdForArticul($product['sku']);
 									$cart.= $id."-".$product['quantity']."-".$dev."-".$pay."-".$sd.',';
 									$checkOrder = $api->checkOrder($cart, 0, $region[0], $zip);
+                                                                      
 									if ($checkOrder->getOrder() == "0")
 									{
 										$post_errors[]='Извините! Некоторых товаров нет в наличии.';;

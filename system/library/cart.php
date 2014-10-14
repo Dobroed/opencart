@@ -1,4 +1,4 @@
-<?
+<?php
 class Cart {
 	private $config;
 	private $db;
