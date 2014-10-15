@@ -1,0 +1,127 @@
+HISTORY
+
+v1.88	
+	Admin-panel - Added ability to specify each block your module id and/or class. This allows you to make a different design each block module
+
+v1.85
+	Code optimization
+
+v1.83
+Make an initial selection, changed the logic of behavior
+
+v1.82
+When sorting by number of option to choose number of output goods (Rev. .. to). For example, to bring products with the number of 5 to 100.
+
+v1.80
+Admin - Carousel - New parameters: the direction of the carousel, while scrolling, scrolling cycling
+
+v1.77
+Added vertical carousel output
+
+v1.75
+Redesigned admin. Admin made in the form of tabs. I think it was more convenient to use the module
+
+v1.7
+Opportunity to make the final selection after all sorts (hits sales, promotions, new products, popular in the selected category)
+
+v1.61
+Ability to display products in the ordinary type of module or "carousel"
+
+v1.55
+Opportunity to make the final selection after all sorts (recommended products in the selected category)
+
+v1.50
+Added the ability to specify for each language in your system unit header
+Reworked design module settings. He became more comfortable and functional + this is future
+Version of the module is displayed in the module settings
+
+v1.43
+When sorting by rating score to choose the displayed item (Rev. .. to). For example, display products with a rating from 3 to 5.
+
+v1.4
+Fixed: An error occurred when the category name contains a "'"
+Fixed: Bug in the logic of the module. The problem with the display of nested categories
+
+v1.35
+Fixed: If the limit output of goods is set to "0" or less, then the module is displayed by default 5 products
+Support Ocstore 1.5.3.1
+
+v1.3
+Added ability to select multiple categories to display in the module
+The "Save and Stay" in the module settings
+
+v1.2
+Small improvements
+
+v1.1
+Small improvements
+
+v1.0
+Release
+
+===========
+***********
+===========
+
+ИСТОРИЯ ИЗМЕНЕНИЙ
+
+v1.88
+	Админ-панель - добавлена возможность указать каждому блоку модуля свой id и/или класс. Это позволяет каждому блоку модуля сделать различный дизайн
+
+v1.85
+	Оптимизация кода
+
+v1.83
+	Сделана первоначальная выборка, изменена логика поведения
+
+v1.82
+	При сортировке по кол-ву возможность выбрать кол-во выводимого товара (от...до). Например, вывести товары с кол-вом от 5 до 100.
+
+v1.80
+	Админка - карусель - новые параметры: направление карусели, время автопрокрутки, цикличность прокрутки
+
+v1.77
+	Добавлен вертикальный вывод карусели 
+	
+v1.75
+	Изменён дизайн админки. Админка сделана в виде вкладок. Мне кажется, стало удобней пользоваться модулем
+
+v1.7
+	Возможность сделать итоговую выборку после всех сортировок (хиты продаж, акции, новинки, популярные в выбранной категории)
+
+v1.61
+	Возможность выводить продукты в обычном типе модуля или в "карусели"
+
+v1.55
+	Возможность сделать итоговую выборку после всех сортировок (рекомендуемые товары в выбранной категории)
+	
+v1.50
+	Добавлена возможность указать для каждого языка в системе свой заголовок модуля
+	Переделан дизайн настроек модуля. Он стал более удобным и функциональным + это задел на будущее
+	Версия модуля отображается в настройках модуля
+
+
+v1.43
+	При сортировке по рейтингу возможность выбрать рейтинг выводимого товара (от...до). Например, вывести товары с рейтингом от 3 до 5.
+
+
+v1.4
+	Исправлено: Ошибка, возникающая, когда название категории содержит символ " ' "
+	Исправлено: Ошибка в логике работы модуля. Проблема с отображением вложенных категорий
+
+v1.35
+	Исправлено: Если лимит выводимых товаров установлен "0" или меньше, то в модуле отображается по-умолчанию 5 продуктов
+	Поддержка Ocstore 1.5.3.1
+
+v1.3
+	Добавлена возможность выбора нескольких категорий для отображения в модуле
+	Кнопка "Сохранить и Остаться" в настройках модуля
+
+v1.2 	
+	Мелкие доработки
+
+v1.1 	
+	Мелкие доработки
+
+v1.0 	
+	Релиз

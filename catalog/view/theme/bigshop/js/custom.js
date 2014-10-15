@@ -1,4 +1,5 @@
 $(document).ready(function(){	   
+     $( "#spinner" ).spinner();
 /*`Scroll to top */
 $('.backtotop').click(function(){
   $('html, body').animate({scrollTop:0}, 'slow');

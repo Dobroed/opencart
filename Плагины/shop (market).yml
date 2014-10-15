@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="Windows-1251"?>
+<!DOCTYPE yml_catalog SYSTEM "shops.dtd">
+
+<yml_catalog date="2013-10-29 10:46">
+    <shop>
+        <name>xn--e1ate2cp.xn--p1ai</name>
+        <company>xn--e1ate2cp.xn--p1ai</company>
+        <url>xn--e1ate2cp.xn--p1ai</url>
+        <currencies>
+            <currency id="RUR" rate="1.0"/>
+        </currencies>
+        <categories>
+            <category id="1537" parentId="1535">Жевательная резинка</category>
+            <category id="1732" parentId="1374"> Развивающие центры и коврики</category>
+            <category id="177" parentId="175">Лампочки</category>
+            <category id="3029" parentId="3028">Духи и смазки для женщин</category>
+            <category id="3229" parentId="1123">Другие оригинальные подарки для кухни</category>
+            <category id="2719" parentId="935">Массажные столы и аксессуары</category>
+            <category id="2742" parentId="962">Зубные щетки</category>
+            <category id="635" parentId="633">Лупы</category>
+            <category id="2133" parentId="989">Шашлычницы</category>
+            <category id="2333" parentId="1498">Бюстгальтеры</category>
+            <category id="1014" parentId="989">Другое оборудование</category>
+            <category id="156" parentId="147">Часы</category>
+            <category id="988" parentId="967">Электровеники</category>
+            <category id="1174" parentId="1123">Фотоальбомы и рамки</category>
+            <category id="1027" parentId="1026">Машинки для стрижки</category>
+            <category id="1006" parentId="989">Кухонные комбайны и измельчители</category>
+            <category id="499" parentId="493">Манки и приманки</category>
+            <category id="1900" parentId="421">Турники</category>
+            <category id="3216" parentId="175">Фонари</category>
+            <category id="390" parentId="388">Эллиптические тренажеры</category>
+            <category id="3219" parentId="1699">Говорящие игрушки-повторюшки</category>
+            <category id="950" parentId="949">Аксессуары</category>
+            <category id="411" parentId="408">Туристические коврики</category>
+            <category id="980" parentId="967">Гладильные системы</category>
+            <category id="1379" parentId="1374">Аксессуары для купания</category>
+            <category id="161" parentId="159">Наборы кухонных принадлежностей</category>
+            <category id="2121" parentId="989">Мороженицы</category>
+            <category id="1002" parentId="989">Блендеры</category>
+            <category id="2716" parentId="934">Аксессуары для украшения ногтей</category>
+            <category id="994" parentId="989">Кухонные весы</category>
+            <category id="1679" parentId="1406">Мягкие игрушки</category>
+            <category id="98" parentId="1">Инструменты</category>
+            <category id="1182" parentId="1181">Инструменты</category>
+            <category id="1183" parentId="1182">Пилы</category>
+            <category id="1715" parentId="247">Подставки для ноутбуков</category>
+            <category id="2663" parentId="2659">Автополив</category>
+            <category id="2137" parentId="1610">Кофе молотый</category>
+            <category id="947" parentId="918">Приборы для ухода за телом и лицом</category>
+            <category id="412" parentId="408">Туристические компасы</category>
+            <category id="936" parentId="935">Вибромассажеры</category>
+            <category id="1483" parentId="1482">Брелоки</category>
+            <category id="589" parentId="583">Цифровые плееры</category>
+            <category id="2718" parentId="941">Антицеллюлитный трикотаж и товары для стройности фигуры</category>
+            <category id="982" parentId="967">Пароочистители</category>
+            <category id="2092" parentId="698">Ортопедические изделия и корректоры осанки</category>
+            <category id="1402" parentId="1399">Ранцы, рюкзаки, сумки</category>
+            <category id="395" parentId="388">Степперы</category>
+            <category id="1029" parentId="1026">Эпиляторы и женские электробритвы</category>
+            <category id="2708" parentId="934">Аппараты для маникюра и педикюра</category>
+            <category id="180" parentId="175">Ночники</category>
+            <category id="3220" parentId="678">Слуховые аппараты</category>
+            <category id="394" parentId="388">Силовые тренажеры</category>
+            <category id="137" parentId="114">Аксессуары для ванной и туалета</category>
+            <category id="938" parentId="935">Другие массажеры</category>
+            <category id="162" parentId="158">Наборы для суши и риса</category>
+            <category id="940" parentId="918">Миостимуляторы</category>
+            <category id="2611" parentId="199">Швабры, щетки, мопы, веники, совки</category>
+            <category id="3163" parentId="3162">Столы и столики</category>
+            <category id="2722" parentId="957">Расчески и аксессуары для укладки волос</category>
+            <category id="3178" parentId="1406">Развивающие игры</category>
+            <category id="2664" parentId="1125">Светодиодные деревья</category>
+            <category id="3225" parentId="114">Полезные вещи для дома</category>
+            <category id="2438" parentId="2435">Аксессуары для уборочной техники</category>
+            <category id="2231" parentId="1145">Сувенирные ножи и мачете</category>
+            <category id="541" parentId="537">Сотовые телефоны</category>
+            <category id="2362" parentId="1499">Майки, футболки</category>
+            <category id="163" parentId="158">Ножи кухонные</category>
+            <category id="3228" parentId="1123">Другие оригинальные подарки</category>
+            <category id="2127" parentId="989">Малые кухонные приборы</category>
+            <category id="2183" parentId="1131">Зажигалки</category>
+            <category id="1165" parentId="1156">Шкатулки для украшений</category>
+            <category id="2760" parentId="918">Косметологические приборы</category>
+            <category id="2733" parentId="962">Средства для отбеливания</category>
+            <category id="1124" parentId="1123">Наручные часы</category>
+            <category id="1873" parentId="1355">Светодиодная продукция</category>
+            <category id="1907" parentId="421">Обручи</category>
+            <category id="1007" parentId="989">Миксеры</category>
+            <category id="2612" parentId="199">Ведра, тазы, контейнеры</category>
+            <category id="3223" parentId="968">Роботы-пылесосы</category>
+            <category id="2713" parentId="934">Аксессуары для педикюра</category>
+            <category id="3202" parentId="35">Прочее</category>
+            <category id="3204" parentId="1650">Куклы</category>
+            <category id="3164" parentId="393">Тренажеры для пресса</category>
+            <category id="3038" parentId="3033">Сувениры</category>
+        </categories>
+        <offers>
+            <offer id="564022" type="vendor.model" available="true">
+                <url>http://xn--e1ate2cp.xn--p1ai/</url>
+                <price>635.4</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3219</categoryId>
+                <vendor>Woody O Time</vendor>
+                <model>Говорящий Хомяк-повторюшка</model>
+            </offer>
+            <offer id="598275" type="vendor.model" available="true">
+                <url>http://xn--e1ate2cp.xn--p1ai/</url>
+                <price>585.35</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>1379</categoryId>
+                <vendor>ZURU</vendor>
+                <model>РобоРыбка Клоун розовая электромагнитный мотор активируется в воде</model>
+            </offer>
+            <offer id="456727" type="vendor.model" available="true">
+                <url>http://xn--e1ate2cp.xn--p1ai/</url>
+                <price>537.5</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>1379</categoryId>
+                <vendor>ZURU</vendor>
+                <model>РобоРыбка Акула голубая</model>
+            </offer>
+            <offer id="598278" type="vendor.model" available="true">
+                <url>http://xn--e1ate2cp.xn--p1ai/</url>
+                <price>604.63</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>1379</categoryId>
+                <vendor>ZURU</vendor>
+                <model>РобоРыбка Акула серая электромагнитный мотор активируется в воде</model>
+            </offer>
+            <offer id="565455" type="vendor.model" available="true">
+                <url>http://xn--e1ate2cp.xn--p1ai/</url>
+                <price>1234.45</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3219</categoryId>
+                <vendor>Woody O Time</vendor>
+                <model>Говорящий Хомяк, 2 шт.</model>
+            </offer>
+            <offer id="598274" type="vendor.model" available="true">
+                <url>http://xn--e1ate2cp.xn--p1ai/</url>
+                <price>581.76</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>1379</categoryId>
+                <vendor>ZURU</vendor>
+                <model>РобоРыбка Клоун зеленая электромагнитный мотор активируется в воде</model>
+            </offer>
+            <offer id="598276" type="vendor.model" available="true">
+                <url>http://xn--e1ate2cp.xn--p1ai/</url>
+                <price>607.02</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>1379</categoryId>
+                <vendor>ZURU</vendor>
+                <model>РобоРыбка Клоун голубая электромагнитный мотор активируется в воде</model>
+            </offer>
+            <offer id="613515" type="vendor.model" available="true">
+                <url>http://xn--e1ate2cp.xn--p1ai/</url>
+                <price>12866.48</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3223</categoryId>
+                <vendor>i Robot</vendor>
+                <model>Roomba 620</model>
+            </offer>
+            <offer id="456734" type="vendor.model" available="true">
+                <url>http://xn--e1ate2cp.xn--p1ai/</url>
+                <price>535.0</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>1379</categoryId>
+                <vendor>ZURU</vendor>
+                <model>РобоРыбка Клоун розовая</model>
+            </offer>
+            <offer id="456728" type="vendor.model" available="true">
+                <url>http://xn--e1ate2cp.xn--p1ai/</url>
+                <price>566.08</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>1379</categoryId>
+                <vendor>ZURU</vendor>
+                <model>РобоРыбка Акула зеленая</model>
+            </offer>
+            <offer id="479588" type="vendor.model" available="true">
+                <url>http://xn--e1ate2cp.xn--p1ai/</url>
+                <price>427.28</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>1679</categoryId>
+                <vendor>Fluffy Family</vendor>
+                <model>Медведь Лежебока 32см муз</model>
+            </offer>
+            <offer id="456733" type="vendor.model" available="true">
+                <url>http://xn--e1ate2cp.xn--p1ai/</url>
+                <price>548.14</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>1379</categoryId>
+                <vendor>ZURU</vendor>
+                <model>РобоРыбка Клоун зеленая</model>
+            </offer>
+        </offers>
+    </shop>
+</yml_catalog>

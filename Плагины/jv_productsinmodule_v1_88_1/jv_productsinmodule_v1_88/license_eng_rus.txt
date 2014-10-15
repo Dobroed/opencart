@@ -1,0 +1,46 @@
+License
+
+This software is not free. The module "JV_Products_in_module" is subject to copyright and is protected by copyright and related rights.
+
+Please make sure you are happy with what it does and how it works before you decide to purchase it. The module "JV_Products_in_module" is updated regularly, but cannot be adjusted immediatly on your request.
+
+A commercial license is per one domain name. To purchase license for each new domain please mail to me at johnny.vega.100@gmail.com
+
+Commercial license are issued once and cannot be revoked. Also there are no refunds for commercial licenses.
+
+Website holders use the module "JV_Quick Order" at their own risk with no guarantees on the author’s behalf. The author cannot be held liable to any damages, financial or otherwise, caused by the use of the module "JV_Quick Order", including the slight disappointment you feel about other modules.
+
+You may not transfer, sell, distribute, sublicense, rent, lease any portion of the software. You can not put the software on the server so it will be available through the public network in order to spread.
+
+You must retain the copyright information intact.
+
+The module "JV_Quick Order" is created and maintained by Eugene Slunitsyn. 
+
+You can contact me by e-mail: johnny.vega.100@gmail.com
+
+© 2012 Eugene Slunitsyn aka JohnnyVega. All rights reserved.
+===============================================
+
+ЛИЦЕНЗИЯ
+
+Это программное обеспечение не свободно. Модуль "JV_Products_in_module" является объектом авторского права и охраняется законом об авторском праве и смежных правах.
+
+Пожалуйста, убедитесь, что вы довольны тем, что он делает и как он работает, прежде чем вы решите приобрести его. Модуль "JV_Products_in_module" регулярно обновляется, но в силу объективных причин не может быть изменен немедленно по Вашему запросу.
+
+Коммерческая лицензия на одно доменное имя. Чтобы приобрести лицензию для каждого нового домена, пож-та, напишите письмо на электронный адрес johnny.vega.100@gmail.com
+
+Это означает, что Вы должны использовать одну лицензию модуля (ПО) для одного магазина (доменного имени), зарегистрированного на Ваше имя или имя Вашей компании. Если Вы хотите использовать модуль для других Ваших магазинов или магазинов сторонних лиц, Вам нужно приобрести дополнительную лицензию.
+
+Коммерческая лицензия выдается один раз и не может быть отозвана. Также нет никаких возмещений для коммерческих лицензий.
+
+Вы используете модуль "JV_Products_in_module" на свой страх и риск, без гарантий от имени автора. Автор не может быть привлечен к ответственности за любой ущерб, финансового или иного характера, вызванный использованием модуля "JV_Products_in_module".
+
+Вы не можете передавать, продавать, распространять, сублицензировать, сдавать в аренду какую-либо часть программного обеспечения. Вы не можете разместить программное обеспечение на сервере, чтобы оно было доступно через сеть общего пользования с целью распространения.
+
+Вы обязаны сохранять информацию об авторском праве нетронутой.
+
+Модуль "JV_Products_in_module" создан и поддерживается Eugene Slunitsyn.
+
+Вы можете связаться со мной по электронной почте: johnny.vega.100@gmail.com
+
+© 2012 Eugene Slunitsyn aka JohnnyVega. Все права защищены.

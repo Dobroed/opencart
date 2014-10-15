@@ -9,9 +9,8 @@
 <div class="warning"><?php echo $error_warning; ?><img src="catalog/view/theme/default/image/close.png" alt="" class="close" /></div>
 <?php } ?>
 <?php echo $column_left; ?><?php echo $column_right; ?>
-<!--
+
  <script type="text/javascript">
-     
  function cmp(){var a=0;$("select[id^=pay]:not(:disabled) option:selected").each(function(){var b=$(this);var c=parseFloat(b.attr("alt"));if(a<c){a=c}});$("#osqNWyGAwJZDACKjVtkvaBUpF").html(a)}
  
  function CugwbgDoQKRH(){isPREPAY=false;$("select[id^=pay]:not(:disabled) option:selected").each(function(){if($(this).text().toLowerCase().indexOf("предоплата")>-1){isPREPAY=true}});if(isPREPAY){$("#ztojzlBzmxFh").show()}else{$("#ztojzlBzmxFh").hide()}}function QGChJGA(a){return a.replace(/^\s+/,"")}
@@ -77,7 +76,7 @@ CugwbgDoQKRH()
 }
 
 </script>
--->
+
 <div id="content"><?php echo $content_top; ?>
   <div class="breadcrumb">
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
@@ -86,7 +85,7 @@ CugwbgDoQKRH()
   </div>
   <h1><?php echo $heading_title; ?>
   </h1>
-  <!--<form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">-->
+  
     <div class="cart-info">
 			<table>
 	        <thead>
@@ -120,36 +119,8 @@ CugwbgDoQKRH()
             <td class="model"><?php echo $product['sku']; ?></td>
 			<?php if($page=="cart") { ?>
             <td class="quantity"><input type="text" name="quantity[<?php echo $product['key']; ?>]" value="<?php echo $product['quantity']; ?>" size="1" />
-              <input id="spinner" name="quant">
-               <script>
-  $(function() {
-    var spinner = $( "#spinner" ).spinner();
- 
-    $( "#disable" ).click(function() {
-      if ( spinner.spinner( "option", "disabled" ) ) {
-        spinner.spinner( "enable" );
-      } else {
-        spinner.spinner( "disable" );
-      }
-    });
-    $( "#destroy" ).click(function() {
-      if ( spinner.spinner( "instance" ) ) {
-        spinner.spinner( "destroy" );
-      } else {
-        spinner.spinner();
-      }
-    });
-    $( "#getvalue" ).click(function() {
-      alert( spinner.spinner( "value" ) );
-    });
-    $( "#setvalue" ).click(function() {
-      spinner.spinner( "value", 5 );
-    });
- 
-    $( "button" ).button();
-  });
-  </script>
-                <input type="image" src="catalog/view/theme/default/image/update.png" alt="<?php echo $button_update; ?>" title="<?php echo $button_update; ?>" onclick="addToCart(<?php echo $product['key']; ?>,2);"/>
+              &nbsp;
+              <input type="image" src="catalog/view/theme/default/image/update.png" alt="<?php echo $button_update; ?>" title="<?php echo $button_update; ?>" />
               &nbsp;<a href="<?php echo $product['remove']; ?>"><img src="catalog/view/theme/default/image/remove.png" alt="<?php echo $button_remove; ?>" title="<?php echo $button_remove; ?>" /></a></td> <?php } else { ?>
 			  <td class="quantity"><?php echo $product['quantity']; ?>
               &nbsp;</td>
@@ -157,8 +128,8 @@ CugwbgDoQKRH()
             <td class="price"><?php echo $product['price']; ?></td>
             <td class="total"><?php echo $product['total']; ?></td>
           </tr>
-		<?php  if ($page=='checkout') { 
-			 if ($k==count($products)-1) { ?>
+		<?php  if($page=='checkout') { ?>
+			<?php if($k==count($products)-1) { ?>
 			<h3>Выберите способ оплаты и доставки</h3>
 		    <form action=<?php echo $action; ?> method="POST">
 		<table>
@@ -212,9 +183,9 @@ CugwbgDoQKRH()
       </table>
 
     </div>
-<!--</form>-->
-	 
-  <?php if(($page=="cart")||(!$page)) { ?>  
+
+	
+  <?php if(($page=="cart")||(!$page)) { ?>
   <?php if(empty($api_errors)) { ?>
   <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
   <input type="hidden" name="page" value="checkout">
@@ -224,7 +195,6 @@ CugwbgDoQKRH()
   <option value="<?php echo $id.'.'.$name; ?>" selected="selected"><?php echo $name; ?></option>
   <?php } ?>
   </select>
-    
 	<input type="submit" value="<?php echo $button_checkout; ?>" class="button" />
 
   </div>
@@ -234,8 +204,7 @@ CugwbgDoQKRH()
   <h3><?php echo $api_error; ?><h3>
   <?php } } } elseif($page=="checkout") { ?>
   <div id="shipping" class="content" style="display: block;">
- <script type="text/javascript"> 
-         function show_ur(b){
+ <script type="text/javascript"> function show_ur(b){
 	var a=document.getElementById(b);
 	if("none"==a.style.display){a.style.display="block"}
 	else{a.style.display="none"}
