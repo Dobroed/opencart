@@ -9,12 +9,13 @@
 <div class="warning"><?php echo $error_warning; ?><img src="catalog/view/theme/default/image/close.png" alt="" class="close" /></div>
 <?php } ?>
 <?php echo $column_left; ?><?php echo $column_right; ?>
-<!--
+
  <script type="text/javascript">
      
  function cmp(){var a=0;$("select[id^=pay]:not(:disabled) option:selected").each(function(){var b=$(this);var c=parseFloat(b.attr("alt"));if(a<c){a=c}});$("#osqNWyGAwJZDACKjVtkvaBUpF").html(a)}
  
- function CugwbgDoQKRH(){isPREPAY=false;$("select[id^=pay]:not(:disabled) option:selected").each(function(){if($(this).text().toLowerCase().indexOf("предоплата")>-1){isPREPAY=true}});if(isPREPAY){$("#ztojzlBzmxFh").show()}else{$("#ztojzlBzmxFh").hide()}}function QGChJGA(a){return a.replace(/^\s+/,"")}
+ function CugwbgDoQKRH(){isPREPAY=false;
+$("select[id^=pay]:not(:disabled) option:selected").each(function(){if($(this).text().toLowerCase().indexOf("предоплата")>-1){isPREPAY=true}});if(isPREPAY){$("#ztojzlBzmxFh").show()}else{$("#ztojzlBzmxFh").hide()}}function QGChJGA(a){return a.replace(/^\s+/,"")}
  
 function TbBfbuoeqGPWQ(){var b=document.getElementsByTagName("span");
 var e=0;for(var a=0;a<b.length;a++){var d=b[a];var f=d.getAttribute("id");if(f){if(f.indexOf("EwmpToHbdZQz")===0||f.indexOf("osqNWyGAwJZDACKjVtkvaBUpF")===0){var c=parseFloat(QGChJGA(d.innerHTML));if(c){e+=c}}}}document.getElementById("kwddczNXnH").innerHTML=Math.round(e*100)/100}
@@ -77,7 +78,7 @@ CugwbgDoQKRH()
 }
 
 </script>
--->
+
 <div id="content"><?php echo $content_top; ?>
   <div class="breadcrumb">
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
@@ -119,40 +120,13 @@ CugwbgDoQKRH()
               <?php } ?></td>
             <td class="model"><?php echo $product['sku']; ?></td>
 			<?php if($page=="cart") { ?>
-            <td class="quantity"><input type="text" name="quantity[<?php echo $product['key']; ?>]" value="<?php echo $product['quantity']; ?>" size="1" />
-              <input id="spinner" name="quant">
-               <script>
-  $(function() {
-    var spinner = $( "#spinner" ).spinner();
- 
-    $( "#disable" ).click(function() {
-      if ( spinner.spinner( "option", "disabled" ) ) {
-        spinner.spinner( "enable" );
-      } else {
-        spinner.spinner( "disable" );
-      }
-    });
-    $( "#destroy" ).click(function() {
-      if ( spinner.spinner( "instance" ) ) {
-        spinner.spinner( "destroy" );
-      } else {
-        spinner.spinner();
-      }
-    });
-    $( "#getvalue" ).click(function() {
-      alert( spinner.spinner( "value" ) );
-    });
-    $( "#setvalue" ).click(function() {
-      spinner.spinner( "value", 5 );
-    });
- 
-    $( "button" ).button();
-  });
-  </script>
-                <input type="image" src="catalog/view/theme/default/image/update.png" alt="<?php echo $button_update; ?>" title="<?php echo $button_update; ?>" onclick="addToCart(<?php echo $product['key']; ?>,2);"/>
-              &nbsp;<a href="<?php echo $product['remove']; ?>"><img src="catalog/view/theme/default/image/remove.png" alt="<?php echo $button_remove; ?>" title="<?php echo $button_remove; ?>" /></a></td> <?php } else { ?>
+            <td class="quantity">
+             <input id="spinner-cart" data-product-id="<?php echo $product['key']; ?>" name="quantity[<?php echo $product['key']; ?>]" value="<?php echo $product['quantity']; ?>" size="3">
+             
+             &nbsp;<a href="<?php echo $product['remove']; ?>"><img src="catalog/view/theme/default/image/remove.png" alt="<?php echo $button_remove; ?>" title="<?php echo $button_remove; ?>" /></a></td> <?php } else { ?>
 			  <td class="quantity"><?php echo $product['quantity']; ?>
               &nbsp;</td>
+                          
 			  <?php } ?>
             <td class="price"><?php echo $product['price']; ?></td>
             <td class="total"><?php echo $product['total']; ?></td>
@@ -361,7 +335,7 @@ $('input[name=\'next\']').bind('change', function() {
 //--></script>
 <?php if ($shipping_status) { ?>
 <script type="text/javascript"><!--
-$('#button-quote').live('click', function() {
+$('#button-quote').on('click', function() {
 	$.ajax({
 		url: 'index.php?route=checkout/cart/quote',
 		type: 'post',
@@ -458,9 +432,8 @@ $('#button-quote').live('click', function() {
 			}
 		}
 	});
-});
-//--></script> 
-<script type="text/javascript"><!--
+});</script> 
+<script type="text/javascript">
 $('select[name=\'country_id\']').bind('change', function() {
 	$.ajax({
 		url: 'index.php?route=checkout/cart/country&country_id=' + this.value,
@@ -503,6 +476,61 @@ $('select[name=\'country_id\']').bind('change', function() {
 });
 
 $('select[name=\'country_id\']').trigger('change');
-//--></script>
+
+
+
+
+  /*   alert($("input[id^='spinner-cart-']").attr('data-product-id'));*/
+
+  
+$('input[name*="quantity"]').spinner({
+    min: 0,
+    max: 100,
+});
+
+  
+  
+  
+$("input[id^='spinner-cart']").on('spinstop',function(){
+    var pid=$(this).attr('data-product-id');
+    var count=$(this).spinner().spinner("value")
+   
+$.ajax({
+  
+		url: 'index.php?route=checkout/cart/update',
+		type: 'post',
+		data:  {
+                   quantity:count,
+                   product_id:pid
+               },                   
+		dataType: 'json',
+		success: function(json) {
+			$('.success, .warning, .attention, information, .error').remove();
+			
+			if (json['error']) {
+				if (json['error']['option']) {
+					for (i in json['error']['option']) {
+						$('#option-' + i).after('<span class="error">' + json['error']['option'][i] + '</span>');
+					}
+				}
+			} 
+			
+			if (json['success']) {
+				//$('#notification').html('<div class="success" style="display: none;">' + json['success'] + '<img src="catalog/view/theme/default/image/close.png" alt="" class="close" /></div>');
+					
+				//$('.success').fadeIn('slow');
+					
+				$('#cart-total').html(json['total']);
+				
+				$('html, body').animate({ scrollTop: 0 }, 'slow'); 
+                              
+			}	
+		}
+	}); 
+
+    });
+  
+
+</script>
 <?php } ?>
 <?php echo $footer; ?>

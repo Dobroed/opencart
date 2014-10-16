@@ -220,9 +220,9 @@ class ModelToolYML extends Model {
 
     public function editProduct($product_id, $data) {
         if (isset($data['image'])) {
-            $this->db->query("UPDATE " . DB_PREFIX . "product SET  price = '" . (float) $data['price'] . "', date_modified = NOW(), stock_status_id ='" . (int) $data['stock_status_id'] . "', image='" . (string) $data['image'] . "', model='".$this->db->escape($data['model'])."' WHERE product_id = '" . (int) $product_id . "'");
+            $this->db->query("UPDATE " . DB_PREFIX . "product SET  price = '" . (float) $data['price'] . "', date_modified = NOW(), stock_status_id ='" . (int) $data['stock_status_id'] . "', image='" . (string) $data['image'] . "', model='".$this->db->escape($data['model'])."',quantity='".$data['quantity']."'  WHERE product_id = '" . (int) $product_id . "'");
         } else {
-            $this->db->query("UPDATE " . DB_PREFIX . "product SET  price = '" . (float) $data['price'] . "', date_modified = NOW(), stock_status_id ='" . (int) $data['stock_status_id'] . "', model='".$this->db->escape($data['model'])."' WHERE product_id = '" . (int) $product_id . "'");
+            $this->db->query("UPDATE " . DB_PREFIX . "product SET  price = '" . (float) $data['price'] . "', date_modified = NOW(), stock_status_id ='" . (int) $data['stock_status_id'] . "', model='".$this->db->escape($data['model'])."',quantity='".$data['quantity']."' WHERE product_id = '" . (int) $product_id . "'");
         }
         if (isset($data['main_category_id']) && $data['main_category_id'] > 0) {
             $this->db->query("DELETE FROM " . DB_PREFIX . "product_to_category WHERE product_id = '" . (int) $product_id . "' AND category_id = '" . (int) $data['main_category_id'] . "'");
