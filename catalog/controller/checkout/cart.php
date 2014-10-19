@@ -809,12 +809,18 @@ class ControllerCheckoutCart extends Controller {
 					}
 					
 					array_multisort($sort_order, SORT_ASC, $results);
-					
-					foreach ($results as $result) {
+                                        
+					$this->load->model('total/' . $results['2']['code']);
+                                        print_r($total."-----------/n"); 
+                                        $this->{'model_total_' . $results['2']['code']}->getTotal($total_data, $total, $taxes);
+                                         print_r($total);
+					/*foreach ($results as $result) {
 						if ($this->config->get($result['code'] . '_status')) {
+                                                    
 							$this->load->model('total/' . $result['code']);
 				
 							$this->{'model_total_' . $result['code']}->getTotal($total_data, $total, $taxes);
+                                                        
 						}
 						
 						$sort_order = array(); 
@@ -824,7 +830,7 @@ class ControllerCheckoutCart extends Controller {
 						}
 			
 						array_multisort($sort_order, SORT_ASC, $total_data);			
-					}
+					}*/
 				}
 				
 				$json['total'] = sprintf($this->language->get('text_items'), $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0), $this->currency->format($total));
