@@ -1006,7 +1006,7 @@ class ControllerCheckoutCart extends Controller {
 						
 		$product_info = $this->model_catalog_product->getProduct($product_id);
 		
-		if ($product_info) {			
+                		if ($product_info) {			
 			if (isset($this->request->post['quantity'])) {
 				$quantity = $this->request->post['quantity'];
 			} else {
@@ -1037,20 +1037,20 @@ class ControllerCheckoutCart extends Controller {
 					
 					$results = $this->model_setting_extension->getExtensions('total');
 					 
-					/*foreach ($results as $key => $value) {
+					foreach ($results as $key => $value) {
                                        
 						$sort_order[$key] = $this->config->get($value['code'] . '_sort_order');
 					}
 					 
 					array_multisort($sort_order, SORT_ASC, $results);
-                                       */
+                                       
                                  
 					foreach ($results as $result) {
                                             
                                             if ($this->config->get($result['code'] . '_status')) {
                                                  
 							$this->load->model('total/' . $result['code']);
-				print_r($taxes);
+				
 							$this->{'model_total_' . $result['code']}->getTotal($total_data, $total, $taxes);
                                                        
 						}
@@ -1063,6 +1063,8 @@ class ControllerCheckoutCart extends Controller {
 			
 						array_multisort($sort_order, SORT_ASC, $total_data);			
 					}
+                            $product_total = $this->currency->format($this->tax->calculate($product_info['price'], $product_info['tax_class_id'], $this->config->get('config_tax')) * $quantity);
+				$json['product_total']=$product_total;
 				} 
 				
 				$json['total'] = sprintf($this->language->get('text_items'), $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0), $this->currency->format($total));

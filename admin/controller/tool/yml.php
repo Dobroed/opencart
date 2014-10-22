@@ -129,7 +129,7 @@ class ControllerToolYML extends Controller {
                             $data_prod['isbn'] = "";
                             $data_prod['mpn'] = "";
                             $data_prod['location'] = "";
-                            $data_prod['quantity'] = ($offer['available'] == "true") ? "1" : "0";
+                            $data_prod['quantity'] = ($offer['available'] == "true") ? "1000" : "0";
                             $data_prod['minimum'] = 1;
                             $data_prod['subtract'] = 0;
                             $data_prod['shipping'] = 1;

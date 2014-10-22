@@ -129,7 +129,7 @@ CugwbgDoQKRH()
                           
 			  <?php } ?>
             <td class="price"><?php echo $product['price']; ?></td>
-            <td class="total"><?php echo $product['total']; ?></td>
+            <td class="total"  data-product-id="<?php echo $product['key']; ?>"><?php echo $product['total']; ?></td>
           </tr>
 		<?php  if ($page=='checkout') { 
 			 if ($k==count($products)-1) { ?>
@@ -484,16 +484,20 @@ $('select[name=\'country_id\']').trigger('change');
 
   
 $('input[name*="quantity"]').spinner({
-    min: 0,
+    min: 1,
     max: 100,
 });
-
+$('input[name*="quantity"]').bind("keydown", function (event) {
+  //  event.preventDefault();
+});
   
   
   
 $("input[id^='spinner-cart']").on('spinstop',function(){
-    var pid=$(this).attr('data-product-id');
-    var count=$(this).spinner().spinner("value")
+ 
+        var pid=$(this).attr('data-product-id');
+    var count=$(this).spinner().spinner("value");
+ 
    
 $.ajax({
   
@@ -521,7 +525,7 @@ $.ajax({
 				//$('.success').fadeIn('slow');
 					
 				$('#cart-total').html(json['total']);
-				
+				$("td[data-product-id='"+pid+"']").html(json['product_total']);
 				$('html, body').animate({ scrollTop: 0 }, 'slow'); 
                               
 			}	
