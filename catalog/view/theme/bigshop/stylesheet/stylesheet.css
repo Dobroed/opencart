@@ -3,7 +3,7 @@ body { background:#f8f8fa url(../image/patterns/10.png) left top repeat; color: 
 td, th, input, textarea, select, a { font-size:0.9em; }
 * { margin:0; padding:0; }
 h1, .welcome { color: #444; font: Verdana; margin-top: 0px; margin-bottom:8px; font-size: 32px; font-weight: normal; }
-h2 { color: #444; font-size: 15px; margin-top: 0px; margin-bottom: 5px; background:#F8F6F6; padding:3px 8px; border-bottom: 1px solid #E4E4E4; text-transform: uppercase; font-weight:normal; }
+h2 { color: #444; font-size: 18px; margin-top: 0px; margin-bottom: 5px; padding:3px 8px; font-weight:bold; }
 p { margin-top: 0px; margin-bottom: 20px; line-height:20px; }
 a, a:visited, a b { color: #333; text-decoration: none; cursor: pointer; }
 a:hover { text-decoration: none; color:#222; }

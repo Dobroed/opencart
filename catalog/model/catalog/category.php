@@ -67,5 +67,10 @@ class ModelCatalogCategory extends Model {
 		
 		return $query->row['total'];
 	}
+          public function getChildrenCategoriesById($parent_id)
+        {
+            $query=$this->db->query("SELECT category_id FROM ". DB_PREFIX ."category WHERE parent_id='".(int)$parent_id."'");
+            return $query->rows;
+        }
 }
 ?>

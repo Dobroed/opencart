@@ -224,7 +224,7 @@ class ControllerModuleJVProductsInM extends Controller {
 		foreach ($results as $result) {
 			//	
 			$path = $this->model_catalog_category->getCategory($result['category_id']);
-			//
+			
 			$this->data['categories'][] = array(
 				'category_id' => $result['category_id'],
 				'name'        => $result['name'],
