@@ -43,6 +43,29 @@ class ModelToolYML extends Model {
             $this->db->query("INSERT INTO " . DB_PREFIX . "category_description SET category_id = '" . (int) $category_id . "', language_id = '" . (int) $language_id . "', name = '" . $this->db->escape($value['name']) . "', meta_keyword = '" . $this->db->escape($value['meta_keyword']) . "', meta_description = '" . $this->db->escape($value['meta_description']) . "', description = '" . $this->db->escape($value['description']) . "', seo_title = '" . $this->db->escape($value['seo_title']) . "', seo_h1 = '" . $this->db->escape($value['seo_h1']) . "'");
         }
 
+        
+        // MySQL Hierarchical Data Closure Table Pattern
+		$level = 0;
+		
+		$query = $this->db->query("SELECT * FROM `" . DB_PREFIX . "category_path` WHERE category_id = '" . (int)$data['parent_id'] . "' ORDER BY `level` ASC");
+		
+		foreach ($query->rows as $result) {
+			$this->db->query("INSERT INTO `" . DB_PREFIX . "category_path` SET `category_id` = '" . (int)$category_id . "', `path_id` = '" . (int)$result['path_id'] . "', `level` = '" . (int)$level . "'");
+			
+			$level++;
+		}
+		
+		$this->db->query("INSERT INTO `" . DB_PREFIX . "category_path` SET `category_id` = '" . (int)$category_id . "', `path_id` = '" . (int)$category_id . "', `level` = '" . (int)$level . "'");
+
+		if (isset($data['category_filter'])) {
+			foreach ($data['category_filter'] as $filter_id) {
+				$this->db->query("INSERT INTO " . DB_PREFIX . "category_filter SET category_id = '" . (int)$category_id . "', filter_id = '" . (int)$filter_id . "'");
+			}
+		}
+                
+        
+        
+        
         if (isset($data['category_store'])) {
             foreach ($data['category_store'] as $store_id) {
                 $this->db->query("INSERT INTO " . DB_PREFIX . "category_to_store SET category_id = '" . (int) $category_id . "', store_id = '" . (int) $store_id . "'");
@@ -238,7 +261,8 @@ class ModelToolYML extends Model {
          
      
       $parent_id=['98'=>'10','19'=>'8','21'=>'8','1899'=>'9','1991'=>'10','1934'=>'10','56'=>'10','1923'=>'10','59'=>'10','60'=>'10','53'=>'10','37'=>'10','1992'=>'10',
-          '988'=>'11','977'=>'17','982'=>'11','3223'=>'11','2216'=>'11','1030'=>'12','996'=>'13','1021'=>'13','1002'=>'13','994'=>'13','2117'=>'13','1014'=>'13','1011'=>'13',
+          '988'=>'11','977'=>'17','982'=>'11','3223'=>'11','2216'=>'11','1030'=>'12','1031'=>'12','2187'=>'12','1032'=>'12','1033'=>'12','1027'=>'12','2186'=>'12','1028'=>'12','1029'=>'12',
+          '996'=>'13','1021'=>'13','1002'=>'13','994'=>'13','2117'=>'13','1014'=>'13','1011'=>'13',
           '2116'=>'13','1006'=>'13','1010'=>'13','1024'=>'13','1005'=>'13','1007'=>'13','1019'=>'13','991'=>'13','2132'=>'13','998'=>'13','2133'=>'13','1016'=>'13','3189'=>'13','999'=>'13',
           '2121'=>'13','993'=>'13','1022'=>'13','2129'=>'13','1008'=>'13','2135'=>'13','2127'=>'13','990'=>'13','1020'=>'13','3225'=>'15','156'=>'15','128'=>'23','2502'=>'23',
           '2628'=>'16','2626'=>'16','2645'=>'16','2646'=>'16','2638'=>'16','2644'=>'16','171'=>'16','163'=>'16','162'=>'16','2642'=>'16','2621'=>'16','159'=>'16','2632'=>'16','161'=>'16','2583'=>'17',
