@@ -228,15 +228,17 @@ class ControllerProductCategory extends Controller {
 
                 $product_total = $this->model_catalog_product->getTotalProducts($data);
                 $results = $this->model_catalog_product->getProducts($data);
-                if (empty($results))
+             /* этот блок работает невенрно   if (empty($results))
                 {                    
-                     $cat2=$this->model_catalog_category->getChildrenCategoriesById($cat);
-                    
-                     $data['filter_category_id']= $cat2[0]['category_id'];
-                     $product_total = $this->model_catalog_product->getTotalProducts($data);
+                     $cat2level=$this->model_catalog_category->getChildrenCategoriesById($cat);
+                  var_dump($cat);
+                     $data['filter_category_id']= $cat2level[0]['category_id'];
+                     $data['limit']='10';
+                     $product_total = $this->model_catalog_product->getTotalProducts($data); 
+                     //var_dump($product_total);
                      $results = $this->model_catalog_product->getProducts($data);
                 }
-                 var_dump($results);
+                // var_dump($results); */
                 
                 foreach ($results as $result) {
 

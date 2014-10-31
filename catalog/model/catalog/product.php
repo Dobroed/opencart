@@ -233,8 +233,10 @@ class ModelCatalogProduct extends Model {
 		}
 		
 		$product_data = array();
-			//print_r($sql);	
-          //  die();
+		///if ($data['filter_category_id']=='9') {	
+               // print_r($sql);	
+               // }
+       
 		$query = $this->db->query($sql);
 	
 		$num_query = $this->db->query("SELECT FOUND_ROWS() AS `found_rows`");

@@ -24,9 +24,9 @@
 <link rel="<?php echo $style['rel']; ?>" type="text/css" href="<?php echo $style['href']; ?>" media="<?php echo $style['media']; ?>" />
 <?php } ?>
 <script type="text/javascript" src="catalog/view/theme/bigshop/js/modernizr.js"></script>
-<script type="text/javascript" src="catalog/view/javascript/jquery/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/jquery/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="catalog/view/theme/bigshop/js/jquery.easing-1.3.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-git.js"></script>
+<!--<script src="http://code.jquery.com/jquery-migrate-git.js"></script>-->
 <script type="text/javascript" src="catalog/view/javascript/jquery/ui/jquery-ui.min.js"></script>
 <link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/ui/themes/ui-lightness/jquery-ui.min.css" />
 <script type="text/javascript" src="catalog/view/javascript/jquery/ui/external/jquery.cookie.js"></script>

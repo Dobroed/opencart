@@ -1,9 +1,11 @@
 $(document).ready(function() {
 	/* Search */
+        
+       
 	$('.button-search').bind('click', function() {
 		url = $('base').attr('href') + 'index.php?route=product/search';
 				 
-		var search = $('input[name=\'search\']').attr('value');
+		var search = $('input[name=\'filter_name\']').attr('value');
 		
 		if (search) {
 			url += '&search=' + encodeURIComponent(search);
@@ -11,7 +13,7 @@ $(document).ready(function() {
 		
 		location = url;
 	});
-	
+   
 	$('#header input[name=\'search\']').bind('keydown', function(e) {
 		if (e.keyCode == 13) {
 			url = $('base').attr('href') + 'index.php?route=product/search';

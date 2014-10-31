@@ -55,6 +55,7 @@ function setAutoComplete(field_id, results_id, get_url){
 		// check for an ENTER or ESC
 		if(keyCode == 13 || keyCode == 27){
 			clearAutoComplete();
+                       sendSearch();
 			return;
 		}
 
@@ -62,6 +63,10 @@ function setAutoComplete(field_id, results_id, get_url){
 		setTimeout(function () {autoComplete(lastVal)}, acDelay);
 	});
 }
+
+
+
+
 
 // treat the auto-complete action (delayed function)
 function autoComplete(lastValue)
@@ -111,8 +116,10 @@ function autoComplete(lastValue)
 		
 			// on click copy the result text to the search field and hide
 			divs.click( function() {
+                            
 				acSearchField.val(this.childNodes[0].nodeValue);
-				clearAutoComplete();
+                                clearAutoComplete();
+                                sendSearch();
 			});
 
 		} else {
@@ -126,6 +133,8 @@ function clearAutoComplete()
 {
 	acResultsDiv.html('');
 	acResultsDiv.css("display","none");
+       
+       
 }
 
 // reposition the results div accordingly to the search field
@@ -182,4 +191,10 @@ function updownArrow(keyCode) {
 		acListCurrent = -1;
 		return false;
 	}
+}
+
+function sendSearch() {
+url = $('base').attr('href') + 'index.php?route=product/search'+ '&search=' + encodeURIComponent(acSearchField.val());
+ location = url;
+ return;
 }

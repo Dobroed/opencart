@@ -138,7 +138,7 @@ a.button:hover, input.button:hover { background:#444; color:#fff; -webkit-transi
 .htabs { height: 30px; line-height: 16px; border-bottom: 1px solid #E4E8F1; }
 .htabs a { border-top: 1px solid #E4E8F1; border-left: 1px solid #E4E8F1; border-right: 1px solid #E4E8F1; background: #FFFFFF url('../image/tab.png') repeat-x; padding: 7px 15px 6px 15px; float: left; font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; text-align: center; text-decoration: none; color: #333; margin-right: 2px; display: none; }
 .htabs a.selected { padding-bottom: 7px; background: #FFFFFF; }
-.tab-content { border-left: 1px solid #E4E8F1; border-right: 1px solid #E4E8F1; border-bottom: 1px solid #E4E8F1; padding: 10px; margin-bottom: 20px; z-index: 2; overflow: auto; }
+.tab-content { min-height:200px;border-left: 1px solid #E4E8F1; border-right: 1px solid #E4E8F1; border-bottom: 1px solid #E4E8F1; padding: 10px; margin-bottom: 20px; z-index: 2; overflow: auto; }
 .tab-content ul { margin-left:20px; }
 /* box */
 .box { margin-bottom: 20px; }
