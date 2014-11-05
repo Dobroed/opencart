@@ -109,7 +109,8 @@ class ControllerModuleCategoryAccordion extends Controller {
                    if ($l<$this->config->get('menu_elements'))
                    {
                     $child_string.='<li><a href="'.$this->url->link('product/category','path=' . $new_path).'">'.$results[$l]['name'].'</a></li>';
-                   } elseif ($l==$this->config->get('menu_elements')) {
+                   } elseif ($l==$this->config->get('menu_elements') && $l!=$size-1) {
+                      
                        $child_string.="<li class=\"showall\"><span class=\"dashed\" onclick=\"var ul=$(this).closest('UL');$(this).remove();ul.children('*').removeClass('hidden');\">ПОКАЗАТЬ ВСЕ ПОДГРУППЫ</span></li>";
                    } else {
                     $child_string.='<li class="hidden"><a href="'.$this->url->link('product/category','path=' . $new_path).'">'.$results[$l]['name'].'</a></li>';

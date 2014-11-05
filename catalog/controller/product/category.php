@@ -213,32 +213,62 @@ class ControllerProductCategory extends Controller {
              * 
              */
             $this->data['products_all'] = array();
-
+                  if (isset($this->request->get['limit'])) {
+            $limitSubCategory = $this->request->get['limit'];
+        } else {
+            $limitSubCategory = $this->config->get('limit_subcategory');
+        }
             for ($x = 0, $cntd = count($this->data['categories']); $x < $cntd; $x++) {
                 $cat = $this->data['categories'][$x]['category_id'];
                $this->data['products_all'][$cat] = array();
 
                 $data = array(
                     'filter_category_id' => $cat,
+                    'filter_filter' => $filter,
                     'sort' => $sort,
                     'order' => $order,
                     'start' => ($page - 1) * $limit,
-                    'limit' => '5'
+                    'limit' =>  $limitSubCategory
                 );
 
                 $product_total = $this->model_catalog_product->getTotalProducts($data);
-                $results = $this->model_catalog_product->getProducts($data);
-             /* этот блок работает невенрно   if (empty($results))
+                
+                    $results = $this->model_catalog_product->getProducts($data);
+              
+             // этот блок работает невенрно 
+               if (empty($results))
                 {                    
                      $cat2level=$this->model_catalog_category->getChildrenCategoriesById($cat);
-                  var_dump($cat);
+                     
+                     $data = array(
+                    'filter_category_id' => $cat2level,
+                    'filter_filter' => $filter,
+                    'sort' => $sort,
+                    'order' => $order,
+                    'start' => ($page - 1) * $limit,
+                    'limit' =>  $limitSubCategory
+                );     
+                $product_total = $this->model_catalog_product->getTotalProductsInSubGroups($data); 
+             //   var_dump($product_total);
+                 
+               if (!empty($cat2level)) {    
+                  $results = $this->model_catalog_product->getProductsInSubGroups($data);
+                                 }
+                 
+                    /* if (isset($cat2level[0]['category_id'])) {
                      $data['filter_category_id']= $cat2level[0]['category_id'];
                      $data['limit']='10';
-                     $product_total = $this->model_catalog_product->getTotalProducts($data); 
-                     //var_dump($product_total);
+                    
+                         if ($product_total==0) {
+                              $data['filter_category_id']= $cat2level[2]['category_id'];
+                              $product_total=$this->model_catalog_product->getTotalProducts($data); 
+                         }
                      $results = $this->model_catalog_product->getProducts($data);
-                }
-                // var_dump($results); */
+                     }*/
+                     
+                   //var_dump( $results);
+                } 
+                
                 
                 foreach ($results as $result) {
 
@@ -285,7 +315,9 @@ class ControllerProductCategory extends Controller {
                         'href' => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'])
                     );
                 }
+          
             }
+            
 
 //конец кода для подкатегорий
 
@@ -299,12 +331,12 @@ class ControllerProductCategory extends Controller {
                 'start' => ($page - 1) * $limit,
                 'limit' => $limit
             );
-
+            
             $results = $this->model_catalog_product->getProducts($data);
             //Вызов метода getFoundProducts должен проводится сразу же после getProducts
             //только тогда он выдает правильное значения количества товаров
             $product_total = $this->model_catalog_product->getFoundProducts();
-
+           
             foreach ($results as $result) {
                 if ($result['image']) {
                     $image = $this->model_tool_image->resize($result['image'], $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));
@@ -477,8 +509,7 @@ class ControllerProductCategory extends Controller {
             $pagination->url = $this->url->link('product/category', 'path=' . $this->request->get['path'] . $url . '&page={page}');
 
             $this->data['pagination'] = $pagination->render();
-
-            $this->data['sort'] = $sort;
+              $this->data['sort'] = $sort;
             $this->data['order'] = $order;
             $this->data['limit'] = $limit;
 

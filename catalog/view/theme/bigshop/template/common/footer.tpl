@@ -122,7 +122,7 @@
         // Keep the currently activated row's highlighted look
         $row.find("a").addClass("maintainHover");
 
-        //$("#content").animate({opacity:"0.1"}, 100);//вверх
+        //$("#content").animate({ opacity:"0.1" }, 100);//вверх
     }
 
     function deactivateSubmenu(row) {
@@ -139,14 +139,14 @@
 
     }
 
-   $("#mega-1").hover(function () {
+    $("#mega-1").hover(function () {
 
-        $("#content").delay(1000).animate({opacity:"0.1"}, 600);//вверх
+        $("#content").delay(1000).animate({ opacity:"0.1" }, 600);//вверх
 
     },
             function () {
-            //    $(".links").text("mega-1 unhover");
-                $("#content").clearQueue().stop().animate({opacity:"1"}, 100);//вверх
+                //    $(".links").text("mega-1 unhover");
+                $("#content").clearQueue().stop().animate({ opacity:"1" }, 100);//вверх
                 $("div[class^='sub-container mega']").css("display", "none");
                 $("a.maintainHover").removeClass("maintainHover");
                 $menu.menuAim({
@@ -160,11 +160,11 @@
     $("div[class^='sub-container']").hover(function () {
         //  $(".links").text("div[class^='sub-container hover");
         //$(this).css("display", "none"); );
-        $("#content").stop().animate({opacity:"0.1"}, 600);//вверх
+        $("#content").stop().animate({ opacity:"0.1" }, 600);//вверх
     },
             function () {
-              //  $(".links").text("div[class^='sub-container UNhover");
-               // $("#content").animate({opacity:"1"}, 200);//вверх
+                //  $(".links").text("div[class^='sub-container UNhover");
+                // $("#content").animate({ opacity:"1" }, 200);//вверх
                 $("div[class^='sub-container mega']").css("display", "none");
                 $("a.maintainHover").removeClass("maintainHover");
                 $menu.menuAim({
@@ -175,14 +175,14 @@
             });
 
     $("#content").hover(function () {
-       
-        $(this).clearQueue().stop().animate({opacity:"1"}, 100);
-  
+
+        $(this).clearQueue().stop().animate({ opacity:"1" }, 100);
+
     },
             function () {
-                 });
-         
-   
+            });
+
+
 </script>
 
 </body></html>

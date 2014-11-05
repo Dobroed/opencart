@@ -249,7 +249,7 @@ a.button:hover, input.button:hover { background:#444; color:#fff; -webkit-transi
 .grid1-icon { background: url(../image/list-icon.png) left -44px no-repeat; width:18px; height:18px; display:block; text-indent:-9999px; float:left; margin-right:8px; margin-top:3px; }
 /* Grid-List Icon */
 a.wishlist:hover { color:#F15A23; }
-.product-grid { width: 100%; overflow: auto; }
+.product-grid { width: 100%; overflow: auto;padding-top: 20px; }
 .product-grid > div { min-width: 130px; display: inline-block; vertical-align: top; margin-right:10px; margin-bottom: 20px; background:#fff; text-align:center; padding-bottom:10px; border:1px solid #fff;}
 .product-grid > div:hover{border:1px solid #e3e3e3; box-shadow:1px 1px 2px #d6d4d4;}
 .product-grid .image { display: block; margin-bottom:5px; }
@@ -669,4 +669,10 @@ font-size: 0.8em;
 -moz-transition: all 0.4s ease 0s;
 transition: all 0.4s ease 0s;
 -webkit-transition: all 0.4s ease 0s;
+}
+.subcategory_div {
+  
+}
+.subcategory_div h2:hover{
+    color:#90D51F; 
 }
