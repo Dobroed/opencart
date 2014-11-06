@@ -38,12 +38,8 @@ class ControllerToolYML extends Controller {
                 // $this->model_tool_yml->deleteCategories();
                 foreach ($xml->shop->categories->category as $category) {
                     $get_category_id=$this->model_tool_yml->categoryExist($category['parentId']);
-                                        $data['category_description']['1']['name'] = $category;
-                    $data['category_description'][1]['meta_keyword'] = "";
-                    $data['category_description'][1]['meta_description'] = "";
+                    $data['category_description']['1']['name'] = $category;
                     $data['category_description'][1]['description'] = "";
-                    $data['category_description'][1]['seo_title'] = "";
-                    $data['category_description'][1]['seo_h1'] = "";
                     $data['category_store'][0] = 0;
                     $data['fake_category_id'] = $category['id'];
                     $data['parent_id'] = ($get_category_id>0)?$get_category_id:$this->model_tool_yml->getParentId($category['id']);
@@ -51,7 +47,7 @@ class ControllerToolYML extends Controller {
                     $data['sort_order'] = 0;
                     $data['status'] = 1;
                     $data['top'] = 0;
-                    $data['keyword'] = 0;
+                   
                   
 
                     if ($this->model_tool_yml->categoryExist($data['fake_category_id'])>0) {
@@ -141,19 +137,12 @@ class ControllerToolYML extends Controller {
                             $data_prod['sort_order'] = 1;
                             $data_prod['width'] = "";
                             $data_prod['height'] = "";
-                            $data_prod['keyword'] = "";
                             $data_prod['status'] = 1;
                             $data_prod['weight_class_id'] = "";
                             $data_prod['stock_status_id'] = ($offer['available'] == "true") ? "7" : "5";
                             $data_prod['date_available'] = "";
                             $data_prod['manufacturer_id'] = 0;
                             $data_prod['product_store'][0] = 0;
-
-                            $data_prod['product_description'][1]['meta_keyword'] = "";
-                            $data_prod['product_description'][1]['tag'] = "";
-                            $data_prod['product_description'][1]['meta_description'] = "";
-                            $data_prod['product_description'][1]['seo_title'] = "";
-                            $data_prod['product_description'][1]['seo_h1'] = "";
                             $data_prod['product_description']['1']['name'] = $offer->name;
                             $data_prod['product_description']['1']['description'] = $offer->description;
                             if (isset($category_id)) {

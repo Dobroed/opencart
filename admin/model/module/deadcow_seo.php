@@ -7,7 +7,7 @@ class ModelModuleDeadcowSEO extends Model
         $slugs = $this->getExistingSlugs();
         foreach ($categories as $category) {
             unset($slugs['category_id=' . $category['category_id']]);
-            $tags = array('[category_name]' => $category['name']);
+            $tags = array('[category_name]' => mb_strtolower($category['name'],'UTF-8'));
             $slug = $uniqueSlug = ($transliterate ? $this->makeSlugs(strtr($template, $tags), 0, true, $source_langcode) : strtr($template, $tags)) . $suffix;
             $index = 1;
             while (in_array($uniqueSlug, $slugs)) {
@@ -25,9 +25,9 @@ class ModelModuleDeadcowSEO extends Model
         $slugs = $this->getExistingSlugs();
         foreach ($products as $product) {
             unset($slugs['product_id=' . $product['product_id']]);
-            $tags = array('[product_name]' => $product['name'],
-                '[model_name]' => $product['model'],
-                '[manufacturer_name]' => $product['manufacturer_name']
+            $tags = array('[product_name]' => mb_strtolower($product['name'],'UTF-8'),
+                '[model_name]' => mb_strtolower($product['model'],'UTF-8'),
+                '[manufacturer_name]' => mb_strtolower($product['manufacturer_name'],'UTF-8')
             );
             $slug = $uniqueSlug = ($transliterate ? $this->makeSlugs(strtr($template, $tags), 0, true, $source_langcode) : strtr($template, $tags)) . $suffix;
             $index = 1;
@@ -45,7 +45,7 @@ class ModelModuleDeadcowSEO extends Model
         $manufacturers = $this->getManufacturers($overwrite);
         $slugs = $this->getExistingSlugs();
         foreach ($manufacturers as $manufacturer) {
-            $tags = array('[manufacturer_name]' => $manufacturer['name']);
+            $tags = array('[manufacturer_name]' => mb_strtolower($manufacturer['name'],'UTF-8'));
             $slug = $uniqueSlug = ($transliterate ? $this->makeSlugs(strtr($template, $tags), 0, true, $source_langcode) : strtr($template, $tags)) . $suffix;
             $index = 1;
             while (in_array($uniqueSlug, $slugs)) {
@@ -77,11 +77,17 @@ class ModelModuleDeadcowSEO extends Model
             if ($yahooID != null) {
                 $keywords = array_merge($keywords, $this->getYahooKeywords($yahooID, $product['description']));
             }
+           
+            
             foreach ($keywords as $keyword) {
+                 
+           
                 $finalKeywords[] = ($transliterate ? $this->makeSlugs(trim($keyword), 0, false, $source_langcode) : trim($keyword));
             }
+        
             $finalKeywords = array_filter(array_unique($finalKeywords));
-            $finalKeywords = implode(', ', $finalKeywords);
+            $finalKeywords = mb_strtolower(implode(', ', $finalKeywords),'UTF-8');
+            
             $this->db->query("UPDATE " . DB_PREFIX . "product_description SET meta_keyword = '" . $this->db->escape($finalKeywords) . "' where product_id = " . (int)$product['product_id'] . " and language_id = " . (int)$product['language_id']);
         }
     }
@@ -100,7 +106,7 @@ class ModelModuleDeadcowSEO extends Model
             } else {
                 $finalKeyword = $category['name'];
             }
-            $this->db->query("UPDATE " . DB_PREFIX . "category_description SET meta_keyword = '" . $this->db->escape($finalKeyword) . "' where category_id = " . (int)$category_id . " and language_id = " . (int)$category['language_id']);
+            $this->db->query("UPDATE " . DB_PREFIX . "category_description SET meta_keyword = '" . $this->db->escape(mb_strtolower($finalKeyword,'UTF-8')) . "' where category_id = " . (int)$category_id . " and language_id = " . (int)$category['language_id']);
         }
     }
 
@@ -156,7 +162,7 @@ class ModelModuleDeadcowSEO extends Model
                 $finalKeywords[] = ($transliterate ? $this->makeSlugs(trim($keyword), 0, false, $source_langcode) : trim($keyword));
             }
             $finalKeywords = array_filter(array_unique($finalKeywords));
-            $this->db->query("UPDATE " . DB_PREFIX . "product_description SET tag = '" . $this->db->escape(implode(',', $finalKeywords)) . "' WHERE product_id = " . (int)$product['product_id'] . " AND language_id = " . (int)$product['language_id']);
+            $this->db->query("UPDATE " . DB_PREFIX . "product_description SET tag = '" . $this->db->escape(mb_strtolower(implode(',', $finalKeywords),'UTF-8')) . "' WHERE product_id = " . (int)$product['product_id'] . " AND language_id = " . (int)$product['language_id']);
         }
     }
 
