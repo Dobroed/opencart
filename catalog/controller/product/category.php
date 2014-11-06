@@ -215,9 +215,11 @@ class ControllerProductCategory extends Controller {
             $this->data['products_all'] = array();
                   if (isset($this->request->get['limit'])) {
             $limitSubCategory = $this->request->get['limit'];
-        } else {
-            $limitSubCategory = $this->config->get('limit_subcategory');
-        }
+        } elseif (count($this->data['categories'])<5) {
+            $limitSubCategory = $this->config->get('limit_subcategoryBig');
+        } else {$limitSubCategory = $this->config->get('limit_subcategory');}
+        
+       
             for ($x = 0, $cntd = count($this->data['categories']); $x < $cntd; $x++) {
                 $cat = $this->data['categories'][$x]['category_id'];
                $this->data['products_all'][$cat] = array();
@@ -511,7 +513,7 @@ class ControllerProductCategory extends Controller {
             $this->data['pagination'] = $pagination->render();
               $this->data['sort'] = $sort;
             $this->data['order'] = $order;
-            $this->data['limit'] = $limit;
+            $this->data['limit'] = (isset($limitSubCategory))?$limitSubCategory:$limit;
 
             $this->data['continue'] = $this->url->link('common/home');
 

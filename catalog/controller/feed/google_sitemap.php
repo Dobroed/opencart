@@ -1,6 +1,7 @@
 <?php
 class ControllerFeedGoogleSitemap extends Controller {
    public function index() {
+      
 	  if ($this->config->get('google_sitemap_status')) {
 		 $output  = '<?xml version="1.0" encoding="UTF-8"?>';
 		 $output .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
@@ -16,7 +17,7 @@ class ControllerFeedGoogleSitemap extends Controller {
 			$output .= '<priority>1.0</priority>';
 			$output .= '</url>';   
 		 }
-		 
+		
 		 $this->load->model('catalog/category');
 		 
 		 $output .= $this->getCategories(0);
@@ -56,10 +57,12 @@ class ControllerFeedGoogleSitemap extends Controller {
 		 }
 		 
 		 $output .= '</urlset>';
-		 
+		$f=fopen('1.xml','w');
+                fwrite($f,$output);
 		 $this->response->addHeader('Content-Type: application/xml');
 		 $this->response->setOutput($output);
 	  }
+          
    }
    
    protected function getCategories($parent_id, $current_path = '') {
@@ -92,7 +95,6 @@ class ControllerFeedGoogleSitemap extends Controller {
 		 
 		   $output .= $this->getCategories($result['category_id'], $new_path);
 	  }
-
 	  return $output;
    }      
 }

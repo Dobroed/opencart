@@ -1,0 +1,411 @@
+Index: admin/model/catalog/manufacturer.php
+===================================================================
+--- admin/model/catalog/manufacturer.php	(revision 0:9a40b85fc382)
++++ admin/model/catalog/manufacturer.php	(revision 0+:9a40b85fc382+)
+@@ -8,11 +8,11 @@
+ 		if (isset($data['image'])) {
+ 			$this->db->query("UPDATE " . DB_PREFIX . "manufacturer SET image = '" . $this->db->escape(html_entity_decode($data['image'], ENT_QUOTES, 'UTF-8')) . "' WHERE manufacturer_id = '" . (int)$manufacturer_id . "'");
+ 		}
+-		
++
+ 		foreach ($data['manufacturer_description'] as $language_id => $value) {
+ 			$this->db->query("INSERT INTO " . DB_PREFIX . "manufacturer_description SET manufacturer_id = '" . (int)$manufacturer_id . "', language_id = '" . (int)$language_id . "', meta_keyword = '" . $this->db->escape($value['meta_keyword']) . "', meta_description = '" . $this->db->escape($value['meta_description']) . "', description = '" . $this->db->escape($value['description']) . "', seo_title = '" . $this->db->escape($value['seo_title']) . "', seo_h1 = '" . $this->db->escape($value['seo_h1']) . "'");
+ 		}
+-		
++
+ 		if (isset($data['manufacturer_store'])) {
+ 			foreach ($data['manufacturer_store'] as $store_id) {
+ 				$this->db->query("INSERT INTO " . DB_PREFIX . "manufacturer_to_store SET manufacturer_id = '" . (int)$manufacturer_id . "', store_id = '" . (int)$store_id . "'");
+@@ -21,6 +21,9 @@
+ 				
+ 		if ($data['keyword']) {
+ 			$this->db->query("INSERT INTO " . DB_PREFIX . "url_alias SET query = 'manufacturer_id=" . (int)$manufacturer_id . "', keyword = '" . $this->db->escape($data['keyword']) . "'");
++		} else {
++			$this->load->model('module/deadcow_seo');
++			$this->model_module_deadcow_seo->generateManufacturer($manufacturer_id, $data['name'], $this->config->get('deadcow_seo_manufacturers_template'), $this->config->get('config_language'));
+ 		}
+ 		
+ 		$this->cache->delete('manufacturer');
+@@ -38,7 +41,7 @@
+ 		foreach ($data['manufacturer_description'] as $language_id => $value) {
+ 			$this->db->query("INSERT INTO " . DB_PREFIX . "manufacturer_description SET manufacturer_id = '" . (int)$manufacturer_id . "', language_id = '" . (int)$language_id . "', meta_keyword = '" . $this->db->escape($value['meta_keyword']) . "', meta_description = '" . $this->db->escape($value['meta_description']) . "', description = '" . $this->db->escape($value['description']) . "', seo_title = '" . $this->db->escape($value['seo_title']) . "', seo_h1 = '" . $this->db->escape($value['seo_h1']) . "'");
+ 		}
+-		
++
+ 		$this->db->query("DELETE FROM " . DB_PREFIX . "manufacturer_to_store WHERE manufacturer_id = '" . (int)$manufacturer_id . "'");
+ 
+ 		if (isset($data['manufacturer_store'])) {
+@@ -51,6 +54,9 @@
+ 		
+ 		if ($data['keyword']) {
+ 			$this->db->query("INSERT INTO " . DB_PREFIX . "url_alias SET query = 'manufacturer_id=" . (int)$manufacturer_id . "', keyword = '" . $this->db->escape($data['keyword']) . "'");
++		} else {
++			$this->load->model('module/deadcow_seo');
++			$this->model_module_deadcow_seo->generateManufacturer($manufacturer_id, $data['name'], $this->config->get('deadcow_seo_manufacturers_template'), $this->config->get('config_language'));
+ 		}
+ 		
+ 		$this->cache->delete('manufacturer');
+@@ -106,8 +112,8 @@
+ 			$query = $this->db->query($sql);
+ 		
+ 			return $query->rows;
+-	}
+-	
++			}
++		 
+ 	public function getManufacturerStores($manufacturer_id) {
+ 		$manufacturer_store_data = array();
+ 		
+@@ -134,9 +140,9 @@
+ 
+ 	public function getManufacturerDescriptions($manufacturer_id) {
+ 		$manufacturer_description_data = array();
+-		
++
+ 		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "manufacturer_description WHERE manufacturer_id = '" . (int)$manufacturer_id . "'");
+-		
++
+ 		foreach ($query->rows as $result) {
+ 			$manufacturer_description_data[$result['language_id']] = array(
+ 				'seo_title'        => $result['seo_title'],
+@@ -146,8 +152,8 @@
+ 				'description'      => $result['description']
+ 			);
+ 		}
+-		
++
+ 		return $manufacturer_description_data;
+-	}	
++	}
+ }
+ ?>
+\ No newline at end of file
+Index: admin/model/catalog/category.php
+===================================================================
+--- admin/model/catalog/category.php	(revision 0:9a40b85fc382)
++++ admin/model/catalog/category.php	(revision 0+:9a40b85fc382+)
+@@ -8,8 +8,12 @@
+ 		if (isset($data['image'])) {
+ 			$this->db->query("UPDATE " . DB_PREFIX . "category SET image = '" . $this->db->escape(html_entity_decode($data['image'], ENT_QUOTES, 'UTF-8')) . "' WHERE category_id = '" . (int)$category_id . "'");
+ 		}
+-		
++
++		$categoryName = "";
+ 		foreach ($data['category_description'] as $language_id => $value) {
++			if ($language_id == $this->config->get('config_language_id')){
++				$categoryName = $value['name'];
++			}
+ 			$this->db->query("INSERT INTO " . DB_PREFIX . "category_description SET category_id = '" . (int)$category_id . "', language_id = '" . (int)$language_id . "', name = '" . $this->db->escape($value['name']) . "', meta_keyword = '" . $this->db->escape($value['meta_keyword']) . "', meta_description = '" . $this->db->escape($value['meta_description']) . "', description = '" . $this->db->escape($value['description']) . "', seo_title = '" . $this->db->escape($value['seo_title']) . "', seo_h1 = '" . $this->db->escape($value['seo_h1']) . "'");
+ 		}
+ 		
+@@ -26,11 +30,16 @@
+ 				}
+ 			}
+ 		}
+-						
++
+ 		if ($data['keyword']) {
+ 			$this->db->query("INSERT INTO " . DB_PREFIX . "url_alias SET query = 'category_id=" . (int)$category_id . "', keyword = '" . $this->db->escape($data['keyword']) . "'");
++		} else {
++			$this->load->model('module/deadcow_seo');
++			if ($categoryName) {
++				$this->model_module_deadcow_seo->generateCategory($category_id, $categoryName, $this->config->get('deadcow_seo_categories_template'), $this->config->get('config_language'));
+-		}
++			}
++		}
+-		
++
+ 		$this->cache->delete('category');
+ 	}
+ 	
+@@ -43,7 +52,11 @@
+ 
+ 		$this->db->query("DELETE FROM " . DB_PREFIX . "category_description WHERE category_id = '" . (int)$category_id . "'");
+ 
++		$categoryName = "";
+ 		foreach ($data['category_description'] as $language_id => $value) {
++			if ($language_id == $this->config->get('config_language_id')){
++				$categoryName = $value['name'];
++			}
+ 			$this->db->query("INSERT INTO " . DB_PREFIX . "category_description SET category_id = '" . (int)$category_id . "', language_id = '" . (int)$language_id . "', name = '" . $this->db->escape($value['name']) . "', meta_keyword = '" . $this->db->escape($value['meta_keyword']) . "', meta_description = '" . $this->db->escape($value['meta_description']) . "', description = '" . $this->db->escape($value['description']) . "', seo_title = '" . $this->db->escape($value['seo_title']) . "', seo_h1 = '" . $this->db->escape($value['seo_h1']) . "'");
+ 		}
+ 		
+@@ -69,7 +82,12 @@
+ 		
+ 		if ($data['keyword']) {
+ 			$this->db->query("INSERT INTO " . DB_PREFIX . "url_alias SET query = 'category_id=" . (int)$category_id . "', keyword = '" . $this->db->escape($data['keyword']) . "'");
++		} else {
++			$this->load->model('module/deadcow_seo');
++			if ($categoryName) {
++				$this->model_module_deadcow_seo->generateCategory($category_id, $categoryName, $this->config->get('deadcow_seo_categories_template'), $this->config->get('config_language'));
+-		}
++			}
++		}
+ 		
+ 		$this->cache->delete('category');
+ 	}
+Index: admin/model/catalog/product.php
+===================================================================
+--- admin/model/catalog/product.php	(revision 0:9a40b85fc382)
++++ admin/model/catalog/product.php	(revision 0+:9a40b85fc382+)
+@@ -8,8 +8,13 @@
+ 		if (isset($data['image'])) {
+ 			$this->db->query("UPDATE " . DB_PREFIX . "product SET image = '" . $this->db->escape(html_entity_decode($data['image'], ENT_QUOTES, 'UTF-8')) . "' WHERE product_id = '" . (int)$product_id . "'");
+ 		}
+-		
++
++		$productName = "";
+ 		foreach ($data['product_description'] as $language_id => $value) {
++			if ($language_id == $this->config->get('config_language_id')){
++				$productName = $value['name'];
++			}
++
+ 			$this->db->query("INSERT INTO " . DB_PREFIX . "product_description SET product_id = '" . (int)$product_id . "', language_id = '" . (int)$language_id . "', name = '" . $this->db->escape($value['name']) . "', meta_keyword = '" . $this->db->escape($value['meta_keyword']) . "', meta_description = '" . $this->db->escape($value['meta_description']) . "', description = '" . $this->db->escape($value['description']) . "', seo_title = '" . $this->db->escape($value['seo_title']) . "', seo_h1 = '" . $this->db->escape($value['seo_h1']) . "'");
+ 		}
+ 		
+@@ -48,7 +53,7 @@
+ 				}
+ 			}
+ 		}
+-		
++
+ 		if (isset($data['product_discount'])) {
+ 			foreach ($data['product_discount'] as $product_discount) {
+ 				$this->db->query("INSERT INTO " . DB_PREFIX . "product_discount SET product_id = '" . (int)$product_id . "', customer_group_id = '" . (int)$product_discount['customer_group_id'] . "', quantity = '" . (int)$product_discount['quantity'] . "', priority = '" . (int)$product_discount['priority'] . "', price = '" . (float)$product_discount['price'] . "', date_start = '" . $this->db->escape($product_discount['date_start']) . "', date_end = '" . $this->db->escape($product_discount['date_end']) . "'");
+@@ -118,10 +123,21 @@
+ 				}
+ 			}
+ 		}
+-						
++
+ 		if ($data['keyword']) {
+ 			$this->db->query("INSERT INTO " . DB_PREFIX . "url_alias SET query = 'product_id=" . (int)$product_id . "', keyword = '" . $this->db->escape($data['keyword']) . "'");
++		} else {
++			$this->load->model('catalog/manufacturer');
++			$manufacturer = $this->model_catalog_manufacturer->getManufacturer((int)$data['manufacturer_id']);
++			$manufacturerName = "";
++			if ($manufacturer) {
++				$manufacturerName = $manufacturer['name'];
+-		}
++			}
++			$this->load->model('module/deadcow_seo');
++			if ($productName) {
++				$this->model_module_deadcow_seo->generateProduct($product_id, $productName, $data['model'], $manufacturerName, $this->config->get('deadcow_seo_products_template'), $this->config->get('config_language'));
++			}
++		}
+ 						
+ 		$this->cache->delete('product');
+ 	}
+@@ -134,8 +150,13 @@
+ 		}
+ 		
+ 		$this->db->query("DELETE FROM " . DB_PREFIX . "product_description WHERE product_id = '" . (int)$product_id . "'");
+-		
++
++		$productName="";
+ 		foreach ($data['product_description'] as $language_id => $value) {
++			if ($language_id == $this->config->get('config_language_id')){
++				$productName = $value['name'];
++			}
++
+ 			$this->db->query("INSERT INTO " . DB_PREFIX . "product_description SET product_id = '" . (int)$product_id . "', language_id = '" . (int)$language_id . "', name = '" . $this->db->escape($value['name']) . "', meta_keyword = '" . $this->db->escape($value['meta_keyword']) . "', meta_description = '" . $this->db->escape($value['meta_description']) . "', description = '" . $this->db->escape($value['description']) . "', seo_title = '" . $this->db->escape($value['seo_title']) . "', seo_h1 = '" . $this->db->escape($value['seo_h1']) . "'");
+ 		}
+ 
+@@ -181,7 +202,7 @@
+ 				}					
+ 			}
+ 		}
+-		
++
+ 		$this->db->query("DELETE FROM " . DB_PREFIX . "product_discount WHERE product_id = '" . (int)$product_id . "'");
+  
+ 		if (isset($data['product_discount'])) {
+@@ -275,7 +296,18 @@
+ 		
+ 		if ($data['keyword']) {
+ 			$this->db->query("INSERT INTO " . DB_PREFIX . "url_alias SET query = 'product_id=" . (int)$product_id . "', keyword = '" . $this->db->escape($data['keyword']) . "'");
++		} else {
++			$this->load->model('catalog/manufacturer');
++			$manufacturer = $this->model_catalog_manufacturer->getManufacturer((int)$data['manufacturer_id']);
++			$manufacturerName = "";
++			if ($manufacturer) {
++				$manufacturerName = $manufacturer['name'];
+-		}
++			}
++			$this->load->model('module/deadcow_seo');
++			if ($productName) {
++				$this->model_module_deadcow_seo->generateProduct($product_id, $productName, $data['model'], $manufacturerName, $this->config->get('deadcow_seo_products_template'), $this->config->get('config_language'));
++			}
++		}
+ 						
+ 		$this->cache->delete('product');
+ 	}
+@@ -342,7 +374,7 @@
+ 		
+ 		$this->cache->delete('product');
+ 	}
+-	
++
+ 	public function getProduct($product_id) {
+ 		$query = $this->db->query("SELECT DISTINCT *, (SELECT keyword FROM " . DB_PREFIX . "url_alias WHERE query = 'product_id=" . (int)$product_id . "') AS keyword FROM " . DB_PREFIX . "product p LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) WHERE p.product_id = '" . (int)$product_id . "' AND pd.language_id = '" . (int)$this->config->get('config_language_id') . "'");
+ 				
+@@ -352,13 +384,13 @@
+ 	public function getProducts($data = array()) {
+ 		if ($data) {
+ 			$sql = "SELECT * FROM " . DB_PREFIX . "product p LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id)";
+-			
++
+ 			if (!empty($data['filter_category_id'])) {
+-				$sql .= " LEFT JOIN " . DB_PREFIX . "product_to_category p2c ON (p.product_id = p2c.product_id)";			
++				$sql .= " LEFT JOIN " . DB_PREFIX . "product_to_category p2c ON (p.product_id = p2c.product_id)";
+ 			}
+-					
+-			$sql .= " WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "'"; 
+-			
++
++			$sql .= " WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "'";
++
+ 			if (!empty($data['filter_name'])) {
+ 				$sql .= " AND LCASE(pd.name) LIKE '" . $this->db->escape(utf8_strtolower($data['filter_name'])) . "%'";
+ 			}
+@@ -366,7 +398,7 @@
+ 			if (!empty($data['filter_model'])) {
+ 				$sql .= " AND LCASE(p.model) LIKE '" . $this->db->escape(utf8_strtolower($data['filter_model'])) . "%'";
+ 			}
+-			
++
+ 			if (!empty($data['filter_price'])) {
+ 				$sql .= " AND p.price LIKE '" . $this->db->escape($data['filter_price']) . "%'";
+ 			}
+@@ -378,29 +410,29 @@
+ 			if (isset($data['filter_status']) && !is_null($data['filter_status'])) {
+ 				$sql .= " AND p.status = '" . (int)$data['filter_status'] . "'";
+ 			}
+-					
++
+ 			if (!empty($data['filter_category_id'])) {
+ 				if (!empty($data['filter_sub_category'])) {
+ 					$implode_data = array();
+-					
++
+ 					$implode_data[] = "category_id = '" . (int)$data['filter_category_id'] . "'";
+-					
++
+ 					$this->load->model('catalog/category');
+-					
++
+ 					$categories = $this->model_catalog_category->getCategories($data['filter_category_id']);
+-					
++
+ 					foreach ($categories as $category) {
+ 						$implode_data[] = "p2c.category_id = '" . (int)$category['category_id'] . "'";
+ 					}
+-					
+-					$sql .= " AND (" . implode(' OR ', $implode_data) . ")";			
++
++					$sql .= " AND (" . implode(' OR ', $implode_data) . ")";
+ 				} else {
+ 					$sql .= " AND p2c.category_id = '" . (int)$data['filter_category_id'] . "'";
+ 				}
+ 			}
+-			
++
+ 			$sql .= " GROUP BY p.product_id";
+-						
++
+ 			$sort_data = array(
+ 				'pd.name',
+ 				'p.model',
+@@ -665,16 +697,16 @@
+ 		
+ 		return $product_tag_data;
+ 	}
+-	
++
+ 	public function getTotalProducts($data = array()) {
+ 		$sql = "SELECT COUNT(DISTINCT p.product_id) AS total FROM " . DB_PREFIX . "product p LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id)";
+ 
+ 		if (!empty($data['filter_category_id'])) {
+-			$sql .= " LEFT JOIN " . DB_PREFIX . "product_to_category p2c ON (p.product_id = p2c.product_id)";			
++			$sql .= " LEFT JOIN " . DB_PREFIX . "product_to_category p2c ON (p.product_id = p2c.product_id)";
+ 		}
+-		 
++
+ 		$sql .= " WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "'";
+-		 			
++
+ 		if (!empty($data['filter_name'])) {
+ 			$sql .= " AND LCASE(pd.name) LIKE '" . $this->db->escape(utf8_strtolower($data['filter_name'])) . "%'";
+ 		}
+@@ -682,15 +714,15 @@
+ 		if (!empty($data['filter_model'])) {
+ 			$sql .= " AND LCASE(p.model) LIKE '" . $this->db->escape(utf8_strtolower($data['filter_model'])) . "%'";
+ 		}
+-		
++
+ 		if (!empty($data['filter_price'])) {
+ 			$sql .= " AND p.price LIKE '" . $this->db->escape($data['filter_price']) . "%'";
+ 		}
+-		
++
+ 		if (isset($data['filter_quantity']) && !is_null($data['filter_quantity'])) {
+ 			$sql .= " AND p.quantity = '" . $this->db->escape($data['filter_quantity']) . "'";
+ 		}
+-		
++
+ 		if (isset($data['filter_status']) && !is_null($data['filter_status'])) {
+ 			$sql .= " AND p.status = '" . (int)$data['filter_status'] . "'";
+ 		}
+@@ -698,40 +730,40 @@
+ 		if (!empty($data['filter_category_id'])) {
+ 			if (!empty($data['filter_sub_category'])) {
+ 				$implode_data = array();
+-				
++
+ 				$implode_data[] = "p2c.category_id = '" . (int)$data['filter_category_id'] . "'";
+-				
++
+ 				$this->load->model('catalog/category');
+-				
++
+ 				$categories = $this->model_catalog_category->getCategories($data['filter_category_id']);
+-				
++
+ 				foreach ($categories as $category) {
+ 					$implode_data[] = "p2c.category_id = '" . (int)$category['category_id'] . "'";
+ 				}
+-				
+-				$sql .= " AND (" . implode(' OR ', $implode_data) . ")";			
++
++				$sql .= " AND (" . implode(' OR ', $implode_data) . ")";
+ 			} else {
+ 				$sql .= " AND p2c.category_id = '" . (int)$data['filter_category_id'] . "'";
+ 			}
+ 		}
+-		
++
+ 		$query = $this->db->query($sql);
+-		
++
+ 		return $query->row['total'];
+-	}	
+-	
++	}
++
+ 	public function getTotalProductsByTaxClassId($tax_class_id) {
+ 		$query = $this->db->query("SELECT COUNT(*) AS total FROM " . DB_PREFIX . "product WHERE tax_class_id = '" . (int)$tax_class_id . "'");
+ 
+ 		return $query->row['total'];
+ 	}
+-		
++
+ 	public function getTotalProductsByStockStatusId($stock_status_id) {
+ 		$query = $this->db->query("SELECT COUNT(*) AS total FROM " . DB_PREFIX . "product WHERE stock_status_id = '" . (int)$stock_status_id . "'");
+ 
+ 		return $query->row['total'];
+ 	}
+-	
++
+ 	public function getTotalProductsByWeightClassId($weight_class_id) {
+ 		$query = $this->db->query("SELECT COUNT(*) AS total FROM " . DB_PREFIX . "product WHERE weight_class_id = '" . (int)$weight_class_id . "'");
+ 

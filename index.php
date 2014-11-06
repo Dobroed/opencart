@@ -227,8 +227,8 @@ $controller->addPreAction(new Action('common/' . $seo_type));
 
 // установка кол-ва элементов в меню по умолчанию
 $config->set('menu_elements', 8);
-$config->set('limit_subcategory', 10);
-	
+$config->set('limit_subcategory', 25);
+$config->set('limit_subcategoryBig', 50);
 
 // Maintenance Mode
 $controller->addPreAction(new Action('common/maintenance'));

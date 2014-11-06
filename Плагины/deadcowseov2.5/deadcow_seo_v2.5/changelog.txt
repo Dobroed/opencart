@@ -1,0 +1,32 @@
+v2.5
+- Added option to turn off transliteration. Use at your own risk, some chars in your products might break your URLs! (eg. "Laptops & Noteboks")
+
+v2.4
+- Generation of meta keywords for categories
+
+v2.3
+- FIXED : Compatible with the new OpenCart tag storage
+
+v2.2
+- NEW : Ability to add an extension : /product-1.html instead of /product-1
+- NEW : You can choose not to overwrite existing values
+- FIXED : No more conflict when categories and products have the same name
+
+v2.1
+- Quick fix for the buttons to display properly after some OpenCart style changes
+
+v2.0
+- OpenCart 1.5 compatibility 
+
+v1.2
+- NEW : Better language handling by letting the admin choose the source language
+- NEW : Better support for typos in product names, eg spaces before / after (suggestion by alexmbra)
+
+v1.1
+- NEW : Tags generation
+- NEW : Spanish translation thanks to Norbert I.!
+- NEW : Added [manufacturer_name] tag to products
+- FIXED : No hyphens "-" removal in Meta Keywords generation (suggestion by gsdev)
+
+v1.0
+- Initial release

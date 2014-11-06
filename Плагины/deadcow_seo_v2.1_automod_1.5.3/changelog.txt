@@ -1,0 +1,18 @@
+v2.1
+- Quick fix for the buttons to display properly after some OpenCart style changes
+
+v2.0
+- OpenCart 1.5 compatibility 
+
+v1.2
+- NEW : Better language handling by letting the admin choose the source language
+- NEW : Better support for typos in product names, eg spaces before / after (suggestion by alexmbra)
+
+v1.1
+- NEW : Tags generation
+- NEW : Spanish translation thanks to Norbert I.!
+- NEW : Added [manufacturer_name] tag to products
+- FIXED : No hyphens "-" removal in Meta Keywords generation (suggestion by gsdev)
+
+v1.0
+- Initial release

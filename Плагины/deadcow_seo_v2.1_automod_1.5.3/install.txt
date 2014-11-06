@@ -1,0 +1,13 @@
+Copy all of this directly to your OpenCart root folder.
+
+Prerequisites :
+- proper .htaccess configuration (rename the .htaccess.txt file in the OpenCart archive to .htaccess if you have an Apache web server. If you have another type of server, see its documentation)
+- "Use SEO URL's" set to yes in OpenCart System > Settings > Server tab
+
+Go to your administration, module section, install it, then go to the edit page and generate your keywords. 
+
+You'll have to generate the keywords everytime you add or update a category / product / manufacturer.
+
+Bug reports : contact@deadcow.fr
+
+Thanks for your attention ladies and gentlemen!
