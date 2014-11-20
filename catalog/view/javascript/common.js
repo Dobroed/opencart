@@ -46,7 +46,7 @@ $(document).ready(function() {
 			$(this).remove();
 		});
 	});
-        /*
+        
 	$('#menu ul > li > a + div').each(function(index, element) {
 		// IE6 & IE7 Fixes
 		if ($.browser.msie && ($.browser.version == 7 || $.browser.version == 6)) {
@@ -68,7 +68,7 @@ $(document).ready(function() {
 	});
 
 	// IE6 & IE7 Fixes
-        /*
+        
 	if ($.browser.msie) {
 		if ($.browser.version <= 6) {
 			$('#column-left + #column-right + #content, #column-left + #content').css('margin-left', '195px');
@@ -87,7 +87,7 @@ $(document).ready(function() {
 				$(this).removeClass('active');
 			});	
 		}
-	} */
+	} 
 	
         
 	

@@ -16,6 +16,6 @@ nbproject
 
 
 # image and cache directories
-image/
+/image
 /catalog/model/checkout/api.php
 /system/cache/
