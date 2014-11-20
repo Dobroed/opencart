@@ -30,6 +30,7 @@ class ControllerToolYML extends Controller {
                 $content = false;
             }
             if ($content) {
+                $content=preg_replace("/&#26;/i",'',$content);
                 $xml = new SimpleXMLElement($content);
                 $this->load->model('tool/yml');
 
@@ -76,7 +77,7 @@ class ControllerToolYML extends Controller {
                                         $proxy = 'proxy.prp.ru:8080';
                                         //Пользователь
                                         $user = "13763";
-                                        $pass = "qwerty";
+                                        $pass = "!qwerty";
                                         if ($ch = curl_init()) {
                                             $f = fopen('curl.txt', 'w+');
                                             fwrite($f, file_exists($local) . " --- " . $offer->articul . PHP_EOL);
