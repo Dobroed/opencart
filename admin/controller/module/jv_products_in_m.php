@@ -222,14 +222,13 @@ class ControllerModuleJVProductsInM extends Controller {
 		$results = $this->model_catalog_category->getCategories(0);
 
 		foreach ($results as $result) {
-			//	
+			//	 
 			$path = $this->model_catalog_category->getCategory($result['category_id']);
 			
 			$this->data['categories'][] = array(
 				'category_id' => $result['category_id'],
 				'name'        => $result['name'],
-				//
-				'href'        => $this->url->link('catalog/category', 'token=' . $this->session->data['token'] . '&' . 'path=' . $path,  'SSL')
+				'href'        => $this->url->link('catalog/category', 'token=' . $this->session->data['token'] . '&' . 'path=' . $path['category_id'],  'SSL')
 				//
 			);
 		}

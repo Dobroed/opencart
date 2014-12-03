@@ -218,6 +218,8 @@ if ($this->config->get('bigshop_body_font') != '' ) {
 <span>Меню</span>
   <ul>
    <li class="home"><a  title="<?php echo $text_home; ?>" href="<?php echo $home; ?>"><span><?php echo $text_home; ?></span></a></li>
+   
+   <li><a href=""></a></li>
    <!--<?php foreach ($categories as $category) { ?>
     <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a>
       <?php if ($category['children']) { ?>
