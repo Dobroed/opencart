@@ -65,7 +65,7 @@ class ControllerCommonFileManager extends Controller {
 	
 	public function directory() {	
 		$json = array();
-		
+			
 		if (isset($this->request->post['directory'])) {
 			$directories = glob(rtrim(DIR_IMAGE . 'data/' . str_replace('../', '', $this->request->post['directory']), '/') . '/*', GLOB_ONLYDIR); 
 			
@@ -163,7 +163,7 @@ class ControllerCommonFileManager extends Controller {
 		if (isset($this->request->post['directory'])) {
 			if (isset($this->request->post['name']) || $this->request->post['name']) {
 				$directory = rtrim(DIR_IMAGE . 'data/' . str_replace('../', '', $this->request->post['directory']), '/');							   
-				
+			
 				if (!is_dir($directory)) {
 					$json['error'] = $this->language->get('error_directory');
 				}

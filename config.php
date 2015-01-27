@@ -1,22 +1,26 @@
 <?php
 // HTTP
-define('HTTP_SERVER', 'http://opencart/');
-define('HTTP_IMAGE', 'http://opencart/image/');
+$host = $_SERVER['HTTP_HOST'];
+define('HTTP_SERVER', 'http://'.$host.'/');
+define('HTTP_IMAGE', 'http://'.$host.'/image/');
+define('HTTP_ADMIN', 'http://'.$host.'/admin/');
+
 // HTTPS
-define('HTTPS_SERVER', 'http://opencart/');
+define('HTTPS_SERVER', 'http://'.$host.'/');
+define('HTTPS_IMAGE', 'http://'.$host.'/image/');
 
 // DIR
-define('DIR_APPLICATION', 'C:\Openserver\Domains\opencart/catalog/');
-define('DIR_SYSTEM', 'C:\Openserver\Domains\opencart/system/');
-define('DIR_DATABASE', 'C:\Openserver\Domains\opencart/system\database/');
-define('DIR_LANGUAGE', 'C:\Openserver\Domains\opencart/catalog\language/');
-define('DIR_TEMPLATE', 'C:\Openserver\Domains\opencart/catalog\view\theme/');
-define('DIR_CONFIG', 'C:\Openserver\Domains\opencart/system\config/');
-define('DIR_IMAGE', 'C:\Openserver\Domains\opencart/image/');
-define('DIR_CACHE', 'C:\Openserver\Domains\opencart/system/cache/');
-define('DIR_DOWNLOAD', 'C:\Openserver\Domains\opencart/download/');
-define('DIR_LOGS', 'C:\Openserver\Domains\opencart/system/logs/');
-
+$dir = dirname(__FILE__);
+define('DIR_APPLICATION', $dir . '/catalog/');
+define('DIR_SYSTEM', $dir . '/system/');
+define('DIR_DATABASE', $dir . '/system/database/');
+define('DIR_LANGUAGE', $dir . '/catalog/language/');
+define('DIR_TEMPLATE', $dir . '/catalog/view/theme/');
+define('DIR_CONFIG', $dir . '/system/config/');
+define('DIR_IMAGE', $dir . '/image/');
+define('DIR_CACHE', $dir . '/system/cache/');
+define('DIR_DOWNLOAD', $dir . '/download/');
+define('DIR_LOGS', $dir . '/system/logs/');
 // DB
 define('DB_DRIVER', 'mysql');
 define('DB_HOSTNAME', 'localhost');

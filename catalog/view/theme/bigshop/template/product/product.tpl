@@ -328,6 +328,7 @@
       <div class="right"><a id="button-review" class="button"><?php echo $button_continue; ?></a></div>
     </div>
   </div>
+</div>
   <?php } ?>
 
     <?php if ($products) { ?>

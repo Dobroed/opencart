@@ -141,7 +141,7 @@ class ControllerModuleJVProductsInM extends Controller {
 		$this->load->model('tool/image');
 		$this->load->model('catalog/review');
 		
-		// Заголовок
+		// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
       	if ($setting['headingtitle']) {
 			$this->data['heading_title'] = $setting['headingtitle'][$this->config->get('config_language_id')];
 			} else {
@@ -153,13 +153,13 @@ class ControllerModuleJVProductsInM extends Controller {
 		
 		$this->data['button_cart'] = $this->language->get('button_cart');
 
-		$this->data['position'] = $setting['position'];  // Позиция модуля
+		$this->data['position'] = $setting['position'];  // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 		
 		$this->data['products'] = array();
 		$results = array();
 		
 		$this->load->model('catalog/category');
-		$categories = $this->model_catalog_category->getCategories(0); // Получаем все категории
+		$categories = $this->model_catalog_category->getCategories(0); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 		foreach ($setting['category'] as $value) {  
 			{
 				$data = array(
@@ -167,16 +167,16 @@ class ControllerModuleJVProductsInM extends Controller {
 					'sort'  =>  $setting['sorting_parametr'],  
 					'order' =>  $setting['sorting_type'],  
 					'start' => 0,
-					'limit' => 1000000000   //$setting['limit']
+					'limit' => 100   //$setting['limit']
 				);
 				
-				$results_iteration = $this->model_catalog_product->getProducts($data); // Продукты из очередной категории
+				$results_iteration = $this->model_catalog_product->getProducts($data); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 				$results = $results + $results_iteration; 
 			}
 		}	
 		
-		// ВЫБОРКА//
-		// Рекомендуемые
+		// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ//
+		// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 		if  (isset($setting['recomended']) && ($setting['recomended'] == 'yes')) {    
 			$featured_products = $this->config->get('featured_product');
 			if ($featured_products) {
@@ -185,9 +185,9 @@ class ControllerModuleJVProductsInM extends Controller {
 			}		
 		}
 
-		// Специальные
+		// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 		if  (isset($setting['specials']) && ($setting['specials'] == 'yes')) {    
-			$limit = 1000000000;
+			$limit = 100;
 			$special_data = array(
 				'sort'  => 'pd.name',
 				'order' => 'ASC',
@@ -197,26 +197,28 @@ class ControllerModuleJVProductsInM extends Controller {
 			$special_results = $this->model_catalog_product->getProductSpecials($special_data);
 		}	
 		
-		// Хиты продаж
+		// пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 		if  (isset($setting['bestsellers']) && ($setting['bestsellers'] == 'yes')) {    
-			$limit = 1000000000;
+			$limit = 100;
 			$bestseller_results = $this->model_catalog_product->getBestSellerProducts($limit);
 		}	
 		
-		// Новинки (последние)
+		// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ)
 		if  (isset($setting['latest']) && ($setting['latest'] == 'yes')) {    
-			$limit = 1000000000;
+			$limit = 100;
 			$latest_results = $this->model_catalog_product->getLatestProducts($limit);
 		}
 
-		// Популярные (часто просматриваемые)
+		// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ)
 		if  (isset($setting['popular']) && ($setting['popular'] == 'yes')) {    
-			$limit = 1000000000;
+			$limit = 100;
 			$popular_results = $this->model_catalog_product->getPopularProducts($limit);
+                       // var_dump($popular_results);
 		}	
 		
 		$temp_results = array ();	
 		foreach ($results as $result) {
+                   
 			if  ( (isset($featured_products)) && (in_array($result['product_id'], $matches_featured_products)) ) {
 				$temp_results[] = $result;
 				continue;
@@ -228,7 +230,8 @@ class ControllerModuleJVProductsInM extends Controller {
 			}
 			
 			if  ( (isset($bestseller_results)) && (isset($bestseller_results[$result['product_id']])) ) {
-				$temp_results[] = $result;
+				
+                            $temp_results[] = $result;
 				continue;
 			}
 			
@@ -243,12 +246,12 @@ class ControllerModuleJVProductsInM extends Controller {
 			}
 			
 		}
-		
+	
 		if ( (isset($featured_products)) || (isset($special_results)) || (isset($bestseller_results)) || (isset($latest_results)) || (isset($popular_results)) ) {
 			$results = $temp_results;
 		}	
 		
-		/* Выборка от...до по кол-ву */
+		/* пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ...пїЅпїЅ пїЅпїЅ пїЅпїЅпїЅ-пїЅпїЅ */
 		$temp_results = array ();
 		foreach ($results as $result) {
 			if (($result['quantity'] >= $setting['quantity_sorting_from']) && ($result['quantity'] <= $setting['quantity_sorting_to'])) {
@@ -256,11 +259,11 @@ class ControllerModuleJVProductsInM extends Controller {
 			}
 		}
 		$results = $temp_results;
-		/* Выборка от...до по кол-ву */
-		
-		/* Выборка от...до по рейтингу */
+		/* пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ...пїЅпїЅ пїЅпїЅ пїЅпїЅпїЅ-пїЅпїЅ */
+			
+		/* пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ...пїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
 		$temp_results = array ();
-		// От <= До 
+		// пїЅпїЅ <= пїЅпїЅ 
 		if ( abs($setting['rating_sorting_from']) <=  abs($setting['rating_sorting_to'])) {
 			foreach ($results as $result) {
 				if (($result['rating'] >= $setting['rating_sorting_from']) && ($result['rating'] <= $setting['rating_sorting_to'])) {
@@ -269,7 +272,7 @@ class ControllerModuleJVProductsInM extends Controller {
 			}
 		}
 		
-		// От > До 
+		// пїЅпїЅ > пїЅпїЅ 
 		if ( abs($setting['rating_sorting_from']) >  abs($setting['rating_sorting_to'])) {
 			foreach ($results as $result) {
 				if (($result['rating'] <= $setting['rating_sorting_from']) && ($result['rating'] >= $setting['rating_sorting_to'])) {
@@ -279,11 +282,11 @@ class ControllerModuleJVProductsInM extends Controller {
 		}
 		
 		$results = $temp_results;
-		/* Выборка от...до по рейтингу */
+		/* пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ...пїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
+	
+		// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ//
 		
-		// ВЫБОРКА//
-		
-		if ($setting['output'] == 'sequential') {  // последовательный вывод 
+		if ($setting['output'] == 'sequential') {  // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ 
 			
 			if (($setting['sorting_parametr'] == 'pd.name') && ($setting['sorting_type'] == 'ASC') ) {
 				uasort($results, 'cmp_name_asc'); 
@@ -345,15 +348,15 @@ class ControllerModuleJVProductsInM extends Controller {
 			}			
 		}
 		
-		if ($setting['output'] == 'random') {   // Случайный 
+		if ($setting['output'] == 'random') {   // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 
 			shuffle($results); }
 		
-		// Лимит
+		// пїЅпїЅпїЅпїЅпїЅ
 		if ($setting['limit'] < 1) {
 			$setting['limit'] = 5;
 		}
 		
-		$results = array_slice($results, 0, $setting['limit'], true);	// Забираем нужное кол-в
+		$results = array_slice($results, 0, $setting['limit'], true);	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ-пїЅ
 		
 		foreach ($results as $result) {
 			if ($result['image']) {
@@ -383,7 +386,7 @@ class ControllerModuleJVProductsInM extends Controller {
 			} else {
 				$rating = false;
 			}
-			
+		
 			$this->data['products'][] = array(
 				'product_id' => $result['product_id'],
 				'thumb'   	 => $image,

@@ -213,14 +213,16 @@ if ($this->config->get('bigshop_body_font') != '' ) {
   <?php echo $cart; ?>
   <!--<div class="links"><a href="<?php echo $home; ?>"><?php echo $text_home; ?></a><a href="<?php echo $wishlist; ?>" id="wishlist-total"><?php echo $text_wishlist; ?></a><a href="<?php echo $account; ?>"><?php echo $text_account; ?></a><a href="<?php echo $shopping_cart; ?>"><?php echo $text_shopping_cart; ?></a><a href="<?php echo $checkout; ?>"><?php echo $text_checkout; ?></a></div>-->
 </div>
-<?php if ($categories) { ?>
+<?php if ($categories)  {  ?>
 <div id="menu">
 <span>Меню</span>
   <ul>
    <li class="home"><a  title="<?php echo $text_home; ?>" href="<?php echo $home; ?>"><span><?php echo $text_home; ?></span></a></li>
-   <!--<?php foreach ($categories as $category) { ?>
+   
+   <li><a href=""></a></li>
+   <?php foreach ($categories as $category) { ?>
     <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a>
-      <?php if ($category['children']) { ?>
+      <!--<?php if ($category['children']) { ?>
       <div>
         <?php for ($i = 0; $i < count($category['children']);) { ?>
         <ul>
@@ -232,10 +234,10 @@ if ($this->config->get('bigshop_body_font') != '' ) {
           <?php } ?>
         </ul>
         <?php } ?>
-      </div>
+      </div> -->
       <?php } ?>
     </li>
-    <?php } ?> -->
+    <?php } ?> 
   </ul>
 </div>
 <?php } ?>
