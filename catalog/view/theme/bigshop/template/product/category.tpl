@@ -16,7 +16,7 @@
     <?php } ?>
   </div>
   <?php } ?>
- 
+
    <div class="product-filter">
     <div class="display"><b><?php echo $text_display; ?></b> <?php echo $text_list; ?> <b>/</b> <a onclick="display('grid');"><?php echo $text_grid; ?></a></div>
     <div class="limit"><b><?php echo $text_limit; ?></b>
@@ -46,71 +46,71 @@
   
   
   <?php if ($categories) { ?>
-
-    <div class="category-list">
-
-    <?php 
-
-        if ( count( $categories ) < 40 ) {
-
-            foreach ( $categories as $k=>$category ) { 
-
-                if( $k > 0 ) echo '<br /><br />';
-
-                echo '<div class=\'subcategory_div\'>';
-                echo '<a href="' . $category['href'] . '"><h2>' . $category['name'] . '</h2></a>';
-                echo '</div>'; 
-                 echo '<hr style="border:none;border-top:solid 1px #eee"/>';
-                echo '<div class="product-list">';
-
-                foreach ( $products_all[ $category['category_id'] ] as $product )
-                {  echo '<div>';
-                if ($product['thumb']) { ?>
-                    <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" title="<?php echo $product['name']; ?>" alt="<?php echo $product['name']; ?>" /></a></div>
-                <?php } 
-                
-                    echo '<div class="name"><a href="' . $product['href'] . '">' . $product['name'] . '</a></div>';
-                    echo '<div class="description">' . $product['description'] . '</div>';
-                    if ( $product['price'] ) {
-                        echo '<div class="price">';
-                        if ( !$product['special'] ) { echo $product['price']; } 
-                        else { echo '<span class="price-old">' . $product['price'] . '</span> <span class="price-new">' . $product['special'] . '</span>'; }
-                        if ( $product['tax'] ) { echo '<br /><span class="price-tax">' . $text_tax . ' ' . $product['tax'] . '</span>'; }
-                        echo '</div>';
-                    }
-                    if ( $product['rating'] ) {
-                        echo '<div class="rating"><img src="catalog/view/theme/default/image/stars-' . $product['rating'] . '.png" alt="' . $product['reviews'] . '" /></div>';
-                    }
-                    echo '<div class="cart">';  ?>
-                     <input type="button" value="<?php echo $button_cart; ?>" onclick="addToCart('<?php echo $product['product_id']; ?>');" class="button" />
-                    </div>
-      
-</div>
-              <?php } ?>
-             </div>
-
-           <?php }      ?>
-
-    <?php } else { ?>
   
 
-    
-    
-    
-    
-    <?php for ($i = 0; $i < count($categories);) { ?>
-    <ul class="list-item">
-      <?php $j = $i + ceil(count($categories) / 4); ?>
-      <?php for (; $i < $j; $i++) { ?>
-      <?php if (isset($categories[$i])) { ?>
-      <li><a href="<?php echo $categories[$i]['href']; ?>"><?php echo $categories[$i]['name']; ?></a></li>
-      <?php } ?>
-      <?php } ?>
-    </ul>
+               
+            <div class="category-list">
+                <?php for ($i = 0; $i < count($categories);) 
+                    { ?>
+                        <ul class="list-item">
+                        <?php $j = $i + ceil(count($categories) / 4); ?>
+                        <?php for (; $i < $j; $i++) 
+                         { ?>
+                             <?php if (isset($categories[$i]))  
+                             { ?>
+                                     <li><a href="<?php echo $categories[$i]['href']; ?>"><?php echo $categories[$i]['name']; ?></a></li>
+                             <?php } ?>
+                    <?php } ?>
+                    </ul>
+                    <?php } ?></div>
+            <?php  if ( count( $categories ) < 40 ) 
+                     {
+                        foreach ( $categories as $k=>$category ) 
+                                { 
+                                    if( $k > 0 ) echo '<br /><br />';
+                                    echo '<div class=\'subcategory_div\'>';
+                                    echo '<a href="' . $category['href'] . '"><h2>' . $category['name'] . '</h2></a>';
+                                    echo '</div>'; 
+                                    echo '<hr style="border:none;border-top:solid 1px #eee"/>';
+                                     echo '<div class="product-list">';
+
+                                    foreach ( $products_all[ $category['category_id'] ] as $product )
+                                      {  
+                                         echo '<div>';
+                                        if ($product['thumb'])
+                                                        { ?>
+                                                             <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" title="<?php echo $product['name']; ?>" alt="<?php echo $product['name']; ?>" /></a></div>
+                                                     <?php } 
+                                        echo '<div class="name"><a href="' . $product['href'] . '">' . $product['name'] . '</a></div>';
+                                        echo '<div class="description">' . $product['description'] . '</div>';
+                                        if ( $product['price'] ) 
+                                                    {
+                                                     echo '<div class="price">';
+                                                     if ( !$product['special'] ) { echo $product['price'];
+                                                    } 
+                                        else 
+                                         { 
+                                            echo '<span class="price-old">' . $product['price'] . '</span> <span class="price-new">' . $product['special'] . '</span>'; 
+                                         }
+                                         if ( $product['tax'] ) { 
+                                             echo '<br /><span class="price-tax">' . $text_tax . ' ' . $product['tax'] . '</span>'; 
+                                         }
+                                         echo '</div>';
+                                       }
+                                    if ( $product['rating'] ) {
+                                    echo '<div class="rating"><img src="catalog/view/theme/default/image/stars-' . $product['rating'] . '.png" alt="' . $product['reviews'] . '" /></div>';
+                                    }
+                                    echo '<div class="cart">';  ?>
+                     <input type="button" value="<?php echo $button_cart; ?>" onclick="addToCart('<?php echo $product['product_id']; ?>');" class="button" />
+                    </div></div>
+                            <?php } ?>
+                        </div>
+                <?php } ?>
     <?php } ?>
-    <?php } ?>
-  </div>
+  
+  
   <?php } ?>
+  
   <?php if ($products) { ?>
  
   <!--<div class="product-compare"><a href="<?php echo $compare; ?>" id="compare-total"><?php echo $text_compare; ?></a></div>-->

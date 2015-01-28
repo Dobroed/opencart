@@ -151,7 +151,7 @@ function repositionResultsDiv()
 
 	// apply the css styles - optimized for Firefox
 	acResultsDiv.css("position","absolute");
-	acResultsDiv.css("left", sf_left - 2);
+       	acResultsDiv.css("left", sf_left - 2);
 	acResultsDiv.css("top", sf_top + sf_height + 5);
 	acResultsDiv.css("width", sf_width - 2);
 }
