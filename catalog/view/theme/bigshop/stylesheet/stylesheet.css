@@ -72,7 +72,7 @@ li.home a { display:block; line-height:35px!important; height: 40px; }
 li.home a span { background:url(../image/home-icon.png) center 5px no-repeat; display:block; width:30px; height:30px; text-indent:-9999px; }
 #menu ul { list-style: none; margin: 0; padding: 0;}
 #menu > ul > li { position: relative; float: left; z-index:999; padding:0px 5px 0px 0px; }
-#menu > ul > li > a { font-size:13px; color: #fff; line-height:40px; text-decoration: none; display: block; padding:0px 10px 0px 10px; z-index: 1009; position: relative; font-weight:bold; }
+#menu > ul > li > a { font-size:14px; color: #fff; line-height:40px; text-decoration: none; display: block; padding:0px 10px 0px 10px; z-index: 1009; position: relative; font-weight:bold; }
 #menu > ul > li:hover > a {color:#fff; background:#F15A23; }
 #menu > ul > li > div { text-align: left;display: none; background:#F15A23; position: absolute; z-index:1008; padding: 5px; border-radius:0px 0px 4px 4px; -webkit-border-radius:0px 0px 4px 4px; -moz-border-radius:0px 0px 4px 4px;}
 #menu > ul > li:hover > div { display: table; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4); }
@@ -192,7 +192,6 @@ a.button:hover, input.button:hover { background:#444; color:#fff; -webkit-transi
 .box-category a:hover, .list-item a:hover { background: #f9f9f9; text-decoration:none; }
 .box-category > ul > li ul li {  }
 .box-category > ul > li ul li a { padding-left: 20px;margin-right: 16px; }
-.box-category > ul > li ul li a:hover, .list-item a:hover { margin-right: 16px; color:#F15A23; }
 .box-category > ul > li ul > li > ul > li > a { padding-left: 40px;text-decoration: none; }
 .sitemap { list-style: none; margin: 0; padding: 0; }
 .sitemap > li { border-top: 1px solid #eee; display: block; position: relative; }
@@ -209,7 +208,10 @@ a.button:hover, input.button:hover { background:#444; color:#fff; -webkit-transi
 .category-info { overflow: auto; margin-bottom: 20px; }
 .category-info .image { float: left; padding:0px; margin-right: 15px; }
 .category-list { overflow: auto; margin-bottom: 20px; }
-.category-list ul { float: left; width: 18%; margin-right:10px;}
+.list-item {width:30%;float:left;margin-left: 20px;}
+.list-item li {width:100%;border:none;}
+.list-item li a {dispay:block;font-size:1em;}
+.list-item li a:hover{background:none;padding: 5px 8px;}
 /* manufacturer */
 .manufacturer-list { overflow: auto; margin-bottom: 20px; }
 .manufacturer-heading { background: #F8F6F6; border-bottom: 1px solid #E4E4E4; font-size: 15px; font-weight: bold; padding: 5px 8px; margin-bottom: 6px; }
@@ -269,6 +271,26 @@ a.wishlist:hover { color:#F15A23; }
 .product-grid .compare a { color: #333333; text-decoration: none; display: block; }
 .product-grid .wishlist a:hover, .product-grid .compare a:hover, .product-list .wishlist a:hover, .product-list .compare a:hover { color:#F15A23; }
 /* Product */
+#discount_circle_big {
+position: absolute;
+top: 0;right:0px;
+z-index: 9;
+}
+.dicount_label {
+width:195px;float:left;display:block;
+}
+.dicount_label img {
+position:absolute;
+}
+#economy {
+color: #FFF;
+background: #90D51F;
+border-radius: 5px;
+border: 1px solid#B0B0B0;
+margin-left: 14px;
+padding: 10px;
+font-weight: normal;
+}
 .product-info { overflow:auto; margin-bottom: 20px; }
 .product-info > .left { float: left; margin-right: 15px; }
 .product-info > .left + .right { margin-left:370px; }
@@ -284,7 +306,7 @@ a.wishlist:hover { color:#F15A23; }
 .product-info .description { border-top: 1px dashed #e2e2e2; border-bottom:1px dashed #e2e2e2; padding: 5px 5px 10px 5px; margin-bottom: 10px; line-height: 20px; color: #4D4D4D; font-size:13px; }
 .product-info .description span { font-weight:bold; }
 .product-info .description a { color: #4D4D4D; text-decoration: none; font-size:13px; }
-.product-info .price { overflow: auto; border-bottom:1px dashed #e2e2e2; padding: 0px 5px 10px 5px; margin-bottom: 10px; font-size:18px; font-weight: bold; color: #F15A23; }
+.product-info .price { overflow: auto; border-bottom:1px dashed #e2e2e2; padding: 0px 5px 10px 210px; margin-bottom: 10px; font-size:18px; font-weight: bold; color: #F15A23; }
 .product-info .price-old { color: #F00; text-decoration: line-through; font-weight:normal; }
 .product-info .price-new { }
 .product-info .price-tag{background:#F15A23 url(../image/price-tag.png) left top no-repeat; display:inline-block; height:48px; padding:0 18px 0 32px; border-radius:0px 3px 3px 0px; -moz-border-radius:0px 3px 3px 0px; -webkit-border-radius:0px 3px 3px 0px; line-height:48px; color:#fff; font-size:25px; font-weight:normal;}
@@ -676,3 +698,4 @@ transition: all 0.4s ease 0s;
 .subcategory_div h2:hover{
     color:#90D51F; 
 }
+

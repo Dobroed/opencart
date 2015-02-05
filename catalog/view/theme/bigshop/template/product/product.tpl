@@ -39,13 +39,13 @@
           <span><?php echo $text_stock; ?></span> <?php echo $stock; ?><br />
           <span><?php echo $text_sku; ?></span> <?php echo $sku; ?>
       </div>
-     <?php if ($price) { ?>
+     <?php if ($price) { ?><div class="dicount_label"><img  src="catalog/view/theme/bigshop/image/sale_sticker.png"></div>
       <div class="price"><?php echo $text_price; ?>
       
         <?php if (!$special) { ?>
         <div class="price-tag">
         <?php echo $price; ?>
-        </div>
+        </div> <!--<span id="economy"><?php echo "-".round($price*1.3-$price,1)." р."; ?></span>-->
         <?php } else { ?>
         <span class="price-old"><?php echo $price; ?></span> <div class="price-tag"><span class="price-new"><?php echo $special; ?></span></div>
         <?php } ?>
