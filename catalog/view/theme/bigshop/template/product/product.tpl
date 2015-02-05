@@ -9,7 +9,7 @@
   <div class="product-info">
     <?php if ($thumb || $images) { ?><div class="left">
       <?php if ($thumb) { ?>
-<div class="image"><img id="discount_circle_big" src="catalog/view/theme/bigshop/image/sale30.png"><a href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>" class="cloud-zoom colorbox" id='zoom1' rel="adjustX: 0, adjustY:0, tint:'#000000',tintOpacity:0.2, zoomWidth:360, position:'inside', showTitle:false"><img src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" id="image" /><span id="zoom-image"><i class="zoom_bttn"></i> Zoom</span></a></div>
+<div class="image"><a href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>" class="cloud-zoom colorbox" id='zoom1' rel="adjustX: 0, adjustY:0, tint:'#000000',tintOpacity:0.2, zoomWidth:360, position:'inside', showTitle:false"><img src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" id="image" /><span id="zoom-image"><i class="zoom_bttn"></i> Zoom</span></a></div>
       
       <?php } ?>
       <?php if ($images) { ?>
@@ -45,7 +45,7 @@
         <?php if (!$special) { ?>
         <div class="price-tag">
         <?php echo $price; ?>
-        </div> <span id="economy"><?php echo "-".round($price*1.3-$price,1)." р."; ?></span>
+        </div> <!--<span id="economy"><?php echo "-".round($price*1.3-$price,1)." р."; ?></span>-->
         <?php } else { ?>
         <span class="price-old"><?php echo $price; ?></span> <div class="price-tag"><span class="price-new"><?php echo $special; ?></span></div>
         <?php } ?>
